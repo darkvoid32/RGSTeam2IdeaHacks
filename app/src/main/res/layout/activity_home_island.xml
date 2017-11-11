@@ -11,8 +11,7 @@
 
         <ImageView
             android:layout_width="75sp"
-            android:layout_height="match_parent"
-            android:src="" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:layout_width="150sp"
@@ -24,7 +23,7 @@
         <ImageView
             android:layout_width="75sp"
             android:layout_height="match_parent"
-            android:src="@drawable/level_icon"/>
+            android:src=""/>
     </LinearLayout>
 
 
