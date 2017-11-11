@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainisland_top">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/currentLevel"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/level_icon"
+            android:text="2"
+            android:gravity="center"
+            android:textSize="40sp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp">
+
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="#3CB371" />
+
+            <TextView
+                android:id="@+id/expCurrent"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="#98FB98" />
+
+            <TextView
+                android:id="@+id/expMax"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:text="222/666"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/gold_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="2000"
+            android:textSize="30sp"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
