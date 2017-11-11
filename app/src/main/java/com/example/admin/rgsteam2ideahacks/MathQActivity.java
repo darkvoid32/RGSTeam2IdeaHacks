@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MathQActivity extends AppCompatActivity {
+    Player player;
     Button btn_c1, btn_c2, btn_c3, btn_c4;
     String[] questions, choices, ans;
     TextView tv_question;
