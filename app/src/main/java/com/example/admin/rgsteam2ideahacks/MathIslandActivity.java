@@ -14,6 +14,7 @@ import android.widget.Button;
  */
 
 public class MathIslandActivity extends AppCompatActivity{
+    Player player;
     Button btn_algebra, btn_nt, btn_combi, btn_geo;
     Intent intent;
 
@@ -48,7 +49,7 @@ public class MathIslandActivity extends AppCompatActivity{
         startActivity(intent);
     }
 
-    public void onNTclick(View v){
+    public void onNTClick(View v){
         intent.putExtra("TOPIC", "nt");
         startActivity(intent);
     }
