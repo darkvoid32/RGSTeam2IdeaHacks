@@ -54,4 +54,10 @@ public class MathIslandActivity extends AppCompatActivity{
         startActivity(intent);
     }
 
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(MathIslandActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }

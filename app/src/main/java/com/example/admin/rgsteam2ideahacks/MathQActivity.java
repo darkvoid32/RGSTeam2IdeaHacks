@@ -1,8 +1,11 @@
 package com.example.admin.rgsteam2ideahacks;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,7 +47,10 @@ public class MathQActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE); // Remove title
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN); // Full Screen
         setContentView(R.layout.activity_math_q);
+        getSupportActionBar().hide();
 
         btn_c1 = findViewById(R.id.btn_c1);
         btn_c2 = findViewById(R.id.btn_c2);
@@ -58,18 +64,31 @@ public class MathQActivity extends AppCompatActivity {
             /*questions = getResources().getStringArray(R.array.ntQuestions);
             choices = getResources().getStringArray(R.array.ntChoices);
             ans = getResources().getStringArray(R.array.ntAns);*/
+            questions = ntQuestions;
+            choices = ntChoices;
+            ans = ntAns;
         } else if (topic.contentEquals("agb")) {
-            questions = getResources().getStringArray(R.array.agbQuestions);
+            /*questions = getResources().getStringArray(R.array.agbQuestions);
             choices = getResources().getStringArray(R.array.agbChoices);
-            ans = getResources().getStringArray(R.array.agbAns);
+            ans = getResources().getStringArray(R.array.agbAns);*/
+            questions = agbQuestions;
+            choices = agbChoices;
+            ans = agbAns;
         } else if (topic.contentEquals("combi")) {
-            questions = getResources().getStringArray(R.array.cbQuestions);
+            /*questions = getResources().getStringArray(R.array.cbQuestions);
             choices = getResources().getStringArray(R.array.cbChoices);
-            ans = getResources().getStringArray(R.array.cbAns);
+            ans = getResources().getStringArray(R.array.cbAns);*/
+            questions = cbQuestions;
+            choices = cbChoices;
+            ans = cbAns;
         } else if (topic.contentEquals("geo")) {
-            questions = getResources().getStringArray(R.array.geoQuestions);
+            /*questions = getResources().getStringArray(R.array.geoQuestions);
             choices = getResources().getStringArray(R.array.geoChoices);
-            ans = getResources().getStringArray(R.array.geoAns);
+            ans = getResources().getStringArray(R.array.geoAns);*/
+            questions = geoQuestions;
+            choices = geoChoices;
+            ans = geoAns;
+
         }
         points = 0;
         currentQ = 0;
@@ -104,7 +123,9 @@ public class MathQActivity extends AppCompatActivity {
         if (currentQ + 1 < questions.length) {
             currentQ++;
         } else {
-
+            Intent intent = new Intent(MathQActivity.this, MathIslandActivity.class);
+            //TODO database shit
+            startActivity(intent);
         }
         loadQ(currentQ);
     }

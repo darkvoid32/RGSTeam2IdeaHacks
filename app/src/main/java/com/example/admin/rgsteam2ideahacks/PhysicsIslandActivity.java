@@ -1,5 +1,6 @@
 package com.example.admin.rgsteam2ideahacks;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
@@ -16,5 +17,11 @@ public class PhysicsIslandActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
+    }
+
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(PhysicsIslandActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 }

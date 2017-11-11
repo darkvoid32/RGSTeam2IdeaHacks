@@ -1,5 +1,6 @@
 package com.example.admin.rgsteam2ideahacks;
 
+import android.content.Intent;
 import android.graphics.Matrix;
 import android.graphics.PointF;
 import android.os.Bundle;
@@ -252,5 +253,11 @@ public class HomeIslandActivity extends AppCompatActivity implements View.OnTouc
 
         sb.append("]");
         Log.d("Touch Events ---------", sb.toString());
+    }
+
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(HomeIslandActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 }

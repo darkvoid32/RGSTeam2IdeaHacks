@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/math_background"
-    android:orientation="vertical"
     tools:context="com.example.admin.rgsteam2ideahacks.MathQActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.75"
+        android:src="@drawable/math_background"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <TextView
         android:id="@+id/tv_question"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="12dp"
         android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
         android:fontFamily="@font/grobold" />
 
     <LinearLayout
@@ -93,5 +103,6 @@
         </LinearLayout>
 
     </LinearLayout>
+    </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
