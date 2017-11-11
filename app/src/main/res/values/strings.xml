@@ -1,13 +1,6 @@
 <resources>
     <string name="app_name">RGSTeam2IdeaHacks</string>
-    <array name="nt_questions">
-        "Which of the following is not a prime number?"
-        ""
-    </array>
-    <array name="nt_choices">
-        "A) 71xxxB) 73xxxC) 77xxxD) 79"
-    </array>
-    <array name="nt_answers">
-        2
-    </array>
+    <item name="math" type="array">
+
+    </item>
 </resources>
