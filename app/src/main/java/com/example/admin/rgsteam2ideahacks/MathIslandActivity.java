@@ -25,7 +25,7 @@ public class MathIslandActivity extends AppCompatActivity{
         setContentView(R.layout.activity_math_island);
 
         getSupportActionBar().hide();
-        
+
         btn_algebra = findViewById(R.id.btn_algebra);
         btn_combi = findViewById(R.id.btn_combi);
         btn_geo = findViewById(R.id.btn_geo);

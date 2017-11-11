@@ -56,7 +56,8 @@ public class MainActivity extends AppCompatActivity {
 
         mainIV.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Log.v("CLICK", " click");
+                final Intent intent = new Intent (MainActivity.this, HomeIslandActivity.class);
+                startActivity(intent);
             }
         });
 
