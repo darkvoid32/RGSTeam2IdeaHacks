@@ -8,6 +8,13 @@ public class Player {
     private String username;
     private int exp;
 
+    // Progress
+
+    // For Physics:
+    // Index 0: Visited the Professor
+    private boolean[] physicsProgress = new boolean[1];
+
+
     public Player(String username, int psiDollars, int exp){
         this.username = username;
         this.psiDollars = psiDollars;
@@ -80,6 +87,14 @@ public class Player {
             for(int expCopy = exp; expCopy >= 0; expCopy-=100*i++);
             return i-1;
         }
+    }
+
+    /***************************************
+     * Manipulate physics progress [START]
+     ****************************************/
+
+    public boolean getPhysicsProgress(int index){
+        return physicsProgress[index];
     }
 
 }
