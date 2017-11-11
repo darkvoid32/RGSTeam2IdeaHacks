@@ -37,16 +37,16 @@
         "D) 9"
     </array>
     <array name="agbQuestions">
-
+        "Given x+1 = 2. What is x?"
     </array>
     <array name="agbChoices">
-
+        "A) 0xxxB) 1xxxC) 2xxxD) 3"
     </array>
     <array name="agbAns">
-
+        "B) 1"
     </array>
     <array name="cbQuestions">
-
+        "How many ways are there to arange 5 distinct books in a straight line?"
     </array>
     <array name="cbChoices">
 
