@@ -1,14 +1,17 @@
 package com.example.admin.rgsteam2ideahacks;
 
+import java.util.Random;
+
 public class Player {
+
     private int psiDollars;
     private String username;
-    private int level;
+    private int exp;
 
-    public Player(String username, int psiDollars, int level){
+    public Player(String username, int psiDollars, int exp){
         this.username = username;
         this.psiDollars = psiDollars;
-        this.level = level;
+        this.exp = exp;
     }
 
     /***************************************
@@ -43,19 +46,40 @@ public class Player {
         this.username = username;
     }
 
-    /*public String generateUsername(){
-
-    }*/
+    // Generate username for user that does not wish to create username
+    public String generateUsername(String[][] names){
+        String[] firstNames = names[0];
+        String[] lastNames = names[1];
+        Random theRand = new Random();
+        String firstName = names[0][theRand.nextInt(firstNames.length)];
+        String lastName = names[0][theRand.nextInt(lastNames.length)];
+        return firstName + " " + lastName;
+    }
 
     /***************************************
-     * Manipulate level [START]
+     * Manipulate exp [START]
      ****************************************/
 
-    public int getLevel() {
-        return level;
+    public int getExp() {
+        return exp;
     }
 
-    public void setLevel(int level) {
-        this.level = level;
+    public void setExp(int exp) {
+        this.exp = exp;
     }
+
+    // Return level of Player with exp
+    public int getLevel(){
+
+        if(exp >= 4500){
+            return (exp - 4500)/1000 + 10;
+        }
+
+        else{
+            int i = 1;
+            for(int expCopy = exp; expCopy >= 0; expCopy-=100*i++);
+            return i-1;
+        }
+    }
+
 }
