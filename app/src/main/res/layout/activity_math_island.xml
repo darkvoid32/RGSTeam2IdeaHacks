@@ -1,17 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/sideisland_math">
 
-    <Button
-        android:id="@+id/btn_algebra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Algebra"
-        android:background="@android:color/transparent"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="104dp" />
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/btn_algebra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Algebra"
+            android:textSize="16sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/>
+
+        <Button
+            android:id="@+id/btn_nt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Number Theory"
+            android:textSize="16sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+        <Button
+            android:id="@+id/btn_combi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Combinatorics"
+            android:textSize="16sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"/>
+
+        <Button
+            android:id="@+id/btn_geo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Geometry"
+            android:textSize="16sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+</RelativeLayout>
