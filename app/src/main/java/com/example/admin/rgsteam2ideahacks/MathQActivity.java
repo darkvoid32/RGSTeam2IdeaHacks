@@ -45,16 +45,19 @@ public class MathQActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_q);
+
         btn_c1 = findViewById(R.id.btn_c1);
         btn_c2 = findViewById(R.id.btn_c2);
         btn_c3 = findViewById(R.id.btn_c3);
         btn_c4 = findViewById(R.id.btn_c4);
+
         tv_question = findViewById(R.id.tv_question);
         String topic = getIntent().getStringExtra("TOPIC");
+
         if (topic.contentEquals("nt")) {
-            questions = getResources().getStringArray(R.array.ntQuestions);
+            /*questions = getResources().getStringArray(R.array.ntQuestions);
             choices = getResources().getStringArray(R.array.ntChoices);
-            ans = getResources().getStringArray(R.array.ntAns);
+            ans = getResources().getStringArray(R.array.ntAns);*/
         } else if (topic.contentEquals("agb")) {
             questions = getResources().getStringArray(R.array.agbQuestions);
             choices = getResources().getStringArray(R.array.agbChoices);

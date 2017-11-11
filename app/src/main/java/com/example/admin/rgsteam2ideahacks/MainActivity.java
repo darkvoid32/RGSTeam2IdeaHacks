@@ -70,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
 
         physicsIV.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Log.v("CLICK", " click");
+                final Intent intent = new Intent (MainActivity.this, PhysicsIslandActivity.class);
+                startActivity(intent);
             }
         });
     }
