@@ -7,6 +7,6 @@ package com.example.admin.rgsteam2ideahacks;
 public class GlobalPlayer {
     static Player p1;
     static {
-        p1 = new Player("china", 2000, 5000);
+        p1 = new Player("china", 2000, 3000);
     }
 }
