@@ -1,12 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.admin.rgsteam2ideahacks.PhysicsIslandActivity">
+    tools:context="com.example.admin.rgsteam2ideahacks.PhysicsIslandActivity"
+    android:background="@drawable/physics_island">
 
+    <!--Button for Horseshoe Bay [START]-->
 
+    <android.support.constraint.Guideline
+        android:id="@+id/horseshoe_right"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".42"/>
 
-</RelativeLayout>
+    <android.support.constraint.Guideline
+        android:id="@+id/horseshoe_left"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.2"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horseshoe_top"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".6"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horseshoe_bottom"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".8"/>
+
+    <Button
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@id/horseshoe_left"
+        app:layout_constraintTop_toBottomOf="@id/horseshoe_top"
+        app:layout_constraintRight_toLeftOf="@id/horseshoe_right"
+        app:layout_constraintBottom_toTopOf="@id/horseshoe_bottom"/>
+    
+    <!--Button for Horseshoe Bay [END]-->
+
+    <!--Button for Tennis Courts [START]-->
+
+    <android.support.constraint.Guideline
+        android:id="@+id/tennis_right"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".65"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/tennis_left"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".5"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/tennis_top"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".55"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/tennis_bottom"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".7"/>
+
+    <Button
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@id/tennis_left"
+        app:layout_constraintTop_toBottomOf="@id/tennis_top"
+        app:layout_constraintRight_toLeftOf="@id/tennis_right"
+        app:layout_constraintBottom_toTopOf="@id/tennis_bottom"/>
+
+    <!--Button for Tennis Courts [END]-->
+
+    <!--Button for Professor's Lab [START]-->
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lab_right"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".67"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lab_left"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lab_top"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".05"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/lab_bottom"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".2"/>
+
+    <Button
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@id/lab_left"
+        app:layout_constraintTop_toBottomOf="@id/lab_top"
+        app:layout_constraintRight_toLeftOf="@id/lab_right"
+        app:layout_constraintBottom_toTopOf="@id/lab_bottom"/>
+
+    <!--Button for Professor's Lab [END]-->
+
+    <!--Button for Island Of Doom [START]-->
+
+    <android.support.constraint.Guideline
+        android:id="@+id/doom_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="551dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/doom_left"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".75"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/doom_top"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".05"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/doom_bottom"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".2"/>
+
+    <Button
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@id/doom_left"
+        app:layout_constraintTop_toBottomOf="@id/doom_top"
+        app:layout_constraintRight_toLeftOf="@id/doom_right"
+        app:layout_constraintBottom_toTopOf="@id/doom_bottom"/>
+
+    <!--Button for Island Of Doom [END]-->
+
+</android.support.constraint.ConstraintLayout>
