@@ -2,12 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mainisland_top">
+    android:background="@drawable/oceanblue"
+    android:id="@+id/rootRL">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_margin="5dp"
+        android:id="@+id/rootLL"
         android:orientation="horizontal">
 
         <TextView
@@ -15,9 +17,9 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@drawable/level_icon"
-            android:text="2"
             android:gravity="center"
-            android:textSize="20sp"/>
+            android:text="2"
+            android:textSize="20sp" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -27,6 +29,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
+                android:id="@+id/expBar"
                 android:background="#3CB371" />
 
             <TextView
@@ -39,8 +42,8 @@
                 android:id="@+id/expMax"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
-                android:text="222/666"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="222/666" />
 
         </RelativeLayout>
 
@@ -48,16 +51,32 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="match_parent"
-            android:src="@drawable/gold_icon"/>
+            android:id="@+id/goldCoinIV"
+            android:src="@drawable/gold_icon" />
 
-        <TextView4
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:id="@+id/coinTV"
             android:text="2000"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:alpha="0.5"
+        android:id="@+id/settings"
+        android:src="@drawable/cogwheel" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/mainisland_top"
+        android:clickable="true"
+        android:id="@+id/mainIslandIV"/>
 
 </RelativeLayout>
