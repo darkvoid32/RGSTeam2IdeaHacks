@@ -49,18 +49,18 @@
         "How many ways are there to arange 5 distinct books in a straight line?"
     </array>
     <array name="cbChoices">
-
+        "A) 120xxxB) 15xxxC) 25xxxD) 24"
     </array>
     <array name="cbAns">
-
+        "A) 120"
     </array>
     <array name="geoQuestions">
-
+        "Find the area of a square with side length 5."
     </array>
     <array name="geoChoices">
-
+        "A) 5xxxB) 10xxxC) 15xxxD) 25"
     </array>
     <array name="geoAns">
-
+        "D) 25"
     </array>
 </resources>
