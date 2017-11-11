@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
 
         //TODO Home page with bird eye view of different islands have clouds floating around
         //TODO Main islands (Graphics)
-        //hello test
         //TODO Main islands (Animation n Personal Character)
         //TODO Personal island
         //TODO Settings shit
