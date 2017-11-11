@@ -55,9 +55,9 @@ public class MathQActivity extends AppCompatActivity {
         String topic = getIntent().getStringExtra("TOPIC");
 
         if (topic.contentEquals("nt")) {
-            questions = getResources().getStringArray(R.array.ntQuestions);
+            /*questions = getResources().getStringArray(R.array.ntQuestions);
             choices = getResources().getStringArray(R.array.ntChoices);
-            ans = getResources().getStringArray(R.array.ntAns);
+            ans = getResources().getStringArray(R.array.ntAns);*/
         } else if (topic.contentEquals("agb")) {
             questions = getResources().getStringArray(R.array.agbQuestions);
             choices = getResources().getStringArray(R.array.agbChoices);
