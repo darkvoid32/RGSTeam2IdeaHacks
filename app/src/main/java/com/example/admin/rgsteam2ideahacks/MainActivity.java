@@ -1,9 +1,12 @@
 package com.example.admin.rgsteam2ideahacks;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.WindowManager;
@@ -46,6 +49,27 @@ public class MainActivity extends AppCompatActivity {
         vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             public void onGlobalLayout() {
                 scrollView.scrollTo(scrollView.getChildAt(0).getWidth()/3, 0);
+            }
+        });
+
+
+
+        mainIV.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Log.v("CLICK", " click");
+            }
+        });
+
+        mathIV.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                final Intent intent = new Intent (MainActivity.this, MathIslandActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        physicsIV.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Log.v("CLICK", " click");
             }
         });
     }

@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 /**
@@ -18,7 +20,12 @@ public class MathIslandActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE); // Remove title
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN); // Full Screen
         setContentView(R.layout.activity_math_island);
+
+        getSupportActionBar().hide();
+        
         btn_algebra = findViewById(R.id.btn_algebra);
         btn_combi = findViewById(R.id.btn_combi);
         btn_geo = findViewById(R.id.btn_geo);
@@ -26,22 +33,22 @@ public class MathIslandActivity extends AppCompatActivity{
         intent = new Intent(getApplicationContext(), MathQActivity.class);
     }
 
-    private void onAlgebraClick(View v){
+    public void onAlgebraClick(View v){
         intent.putExtra("TOPIC", "agb");
         startActivity(intent);
     }
 
-    private void onCombiClick(View v){
+    public void onCombiClick(View v){
         intent.putExtra("TOPIC", "combi");
         startActivity(intent);
     }
 
-    private void onGeoClick(View v){
+    public void onGeoClick(View v){
         intent.putExtra("TOPIC", "geo");
         startActivity(intent);
     }
 
-    private void onNTclick(View v){
+    public void onNTclick(View v){
         intent.putExtra("TOPIC", "nt");
         startActivity(intent);
     }
