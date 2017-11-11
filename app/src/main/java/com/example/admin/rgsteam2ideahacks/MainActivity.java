@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //TODO Home page with bird eye view of different islands have clouds floating around
         //TODO Main islands (Graphics)
         //TODO Main islands (Animation n Personal Character)
         //TODO Personal island
