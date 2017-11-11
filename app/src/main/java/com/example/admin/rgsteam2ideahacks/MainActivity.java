@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //TODO Main islands (Graphics)
+        //hello test
         //TODO Main islands (Animation n Personal Character)
         //TODO Personal island
         //TODO Settings shit
