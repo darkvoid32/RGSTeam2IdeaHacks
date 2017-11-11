@@ -22,13 +22,13 @@ public class MathQActivity extends AppCompatActivity {
     public static String[] ntAns = {"C) 77", "C) 97", "C) 823", "D) 47", "D) 4/7"
             , "A) 3/12", "D) 4/3", "B) 5", "A) 1", "D) 9"};
     public static String[] agbQuestions = {};
-    public static String[] agbChoice = {};
+    public static String[] agbChoices = {};
     public static String[] agbAns = {};
     public static String[] cbQuestions = {};
-    public static String[] cbChoice = {};
+    public static String[] cbChoices = {};
     public static String[] cbAns = {};
     public static String[] geoQuestions = {};
-    public static String[] geoChoice = {};
+    public static String[] geoChoices = {};
     public static String[] geoAns = {};
 
 
@@ -36,6 +36,24 @@ public class MathQActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_q);
-
+        String topic = getIntent().getStringExtra("TOPIC");
+        String[] questions, choices, ans;
+        if (topic.contentEquals("nt")){
+            questions = ntQuestions;
+            choices = ntChoices;
+            ans = ntAns;
+        }else if(topic.contentEquals("agb")){
+            questions = agbQuestions;
+            choices = agbChoices;
+            ans = agbAns;
+        }else if(topic.contentEquals("combi")){
+            questions = cbQuestions;
+            choices = cbChoices;
+            ans = cbAns;
+        }else if(topic.contentEquals("geo")){
+            questions = geoQuestions;
+            choices = geoChoices;
+            ans = geoAns;
+        }
     }
 }
