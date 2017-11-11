@@ -1,29 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.admin.rgsteam2ideahacks.MainActivity"
-    android:background="@drawable/oceanblue">
+    android:scrollbars="none"
+    tools:context="com.example.admin.rgsteam2ideahacks.MainActivity">
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/mainisland_top"
-        android:layout_centerInParent="true"
-        android:id="@+id/mainIsland"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/oceanblue"
+        android:orientation="horizontal">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/sideisland_math"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
 
 
+            <ImageView
+                android:id="@+id/sideIslandPhysicsIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sideisland_physics" />
+
+            <TextView
+                style="@style/LineText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:textSize="20dp"
+                android:typeface="monospace"
+                android:text="Math Island" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/mainIsland"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mainisland_top" />
+
+            <TextView
+                style="@style/LineText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:textSize="20dp"
+                android:typeface="monospace"
+                android:text="Your Island" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/sideIslandMathIV"
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/sideisland_math" />
+
+            <TextView
+                style="@style/LineText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:textSize="20dp"
+                android:typeface="monospace"
+                android:text="Physics Island" />
+
+        </RelativeLayout>
 
 
-
-
-</RelativeLayout>
+    </LinearLayout>
+</HorizontalScrollView>
