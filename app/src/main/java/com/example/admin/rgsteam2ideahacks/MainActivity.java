@@ -16,5 +16,7 @@ public class MainActivity extends AppCompatActivity {
         //TODO Settings shit
         //TODO Achievement shit (Later)
         //TODO Level shit (Later)
+
+
     }
 }
