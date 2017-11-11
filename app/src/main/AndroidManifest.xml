@@ -30,7 +30,9 @@
         <activity android:name=".HomeIslandActivity"
             android:screenOrientation="sensorLandscape">
         </activity>
-        <activity android:name=".PhysicsIslandActivity"></activity>
+        <activity android:name=".PhysicsIslandActivity"
+            android:screenOrientation="sensorLandscape">
+        </activity>
     </application>
 
 </manifest>
