@@ -112,42 +112,33 @@ public class PhysicsQActivity extends AppCompatActivity {
 
         t.start();
 
-        if (topic.contentEquals("nt"))
+        if (topic.contentEquals("f"))
 
         {
-            questions = getResources().getStringArray(R.array.ntQuestions);
-            choices = getResources().getStringArray(R.array.ntChoices);
-            ans = getResources().getStringArray(R.array.ntAns);
+            questions = getResources().getStringArray(R.array.fQuestions);
+            choices = getResources().getStringArray(R.array.fChoices);
+            ans = getResources().getStringArray(R.array.fAns);
             /*questions = ntQuestions;
             choices = ntChoices;
             ans = ntAns;*/
-        } else if (topic.contentEquals("agb"))
+        } else if (topic.contentEquals("k"))
 
         {
-            questions = getResources().getStringArray(R.array.agbQuestions);
-            choices = getResources().getStringArray(R.array.agbChoices);
-            ans = getResources().getStringArray(R.array.agbAns);
+            questions = getResources().getStringArray(R.array.kQuestions);
+            choices = getResources().getStringArray(R.array.kChoices);
+            ans = getResources().getStringArray(R.array.kAns);
             /*questions = agbQuestions;
             choices = agbChoices;
             ans = agbAns;*/
-        } else if (topic.contentEquals("combi"))
+        } else if (topic.contentEquals("m"))
 
         {
-            questions = getResources().getStringArray(R.array.cbQuestions);
-            choices = getResources().getStringArray(R.array.cbChoices);
-            ans = getResources().getStringArray(R.array.cbAns);
+            questions = getResources().getStringArray(R.array.mQuestions);
+            choices = getResources().getStringArray(R.array.mChoices);
+            ans = getResources().getStringArray(R.array.mAns);
             /*questions = cbQuestions;
             choices = cbChoices;
             ans = cbAns;*/
-        } else if (topic.contentEquals("geo"))
-
-        {
-            questions = getResources().getStringArray(R.array.geoQuestions);
-            choices = getResources().getStringArray(R.array.geoChoices);
-            ans = getResources().getStringArray(R.array.geoAns);
-            /*questions = geoQuestions;
-            choices = geoChoices;
-            ans = geoAns;*/
         }
 
         points = 0;
@@ -168,7 +159,7 @@ public class PhysicsQActivity extends AppCompatActivity {
 
     public void loadQ(int i) {
         tv_question.setText(questions[i]);
-        String[] currentChoice = choices[i].split("xxx");
+        String[] currentChoice = choices[i].split("...");
         btn_c1.setText(currentChoice[0]);
         btn_c2.setText(currentChoice[1]);
         btn_c3.setText(currentChoice[2]);
