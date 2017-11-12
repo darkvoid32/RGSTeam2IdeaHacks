@@ -11,6 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -67,7 +68,7 @@ public class HomeIslandActivity extends AppCompatActivity implements View.OnTouc
         getSupportActionBar().hide();
 
         try{
-            FileInputStream inputStream = openFileInput("UserAccounts.txt");
+            FileInputStream inputStream = openFileInput("PlayerData.txt");
             Scanner inputStreamScanner = new Scanner(inputStream);
 
             ArrayList<String> lines  = new ArrayList<String>();

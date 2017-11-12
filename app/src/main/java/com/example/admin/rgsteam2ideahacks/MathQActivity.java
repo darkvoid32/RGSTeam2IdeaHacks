@@ -14,7 +14,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -35,6 +37,7 @@ public class MathQActivity extends AppCompatActivity {
     private TextView speechBubbleText, rightWrong;
     private ImageView textBubble;
 
+    private final String TAG = "MathQActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,34 +62,6 @@ public class MathQActivity extends AppCompatActivity {
 
         tv_question = findViewById(R.id.tv_question);
         String topic = getIntent().getStringExtra("TOPIC");
-
-        try{
-            FileInputStream inputStream = openFileInput("UserAccounts.txt");
-            Scanner inputStreamScanner = new Scanner(inputStream);
-
-            ArrayList<String> lines  = new ArrayList<String>();
-            while(inputStreamScanner.hasNextLine()){
-                lines.add(inputStreamScanner.nextLine());
-            }
-
-            currentPlayer = new Player(lines.get(0), Integer.parseInt(lines.get(1)), Integer.parseInt(lines.get(2)));
-
-            // Parse physics progress into array
-            Scanner physicsScanner = new Scanner(lines.get(3));
-            physicsScanner.useDelimiter(",");
-            ArrayList<Boolean> physicsProgress = new ArrayList<>();
-
-            while(physicsScanner.hasNext()){
-                physicsProgress.add(new Boolean(physicsScanner.next()));
-            }
-
-            currentPlayer.setPhysicsProgress(physicsProgress);
-        }
-        catch(IOException exception){
-            Log.w("MainActivity", exception.getStackTrace().toString());
-        }
-
-        Toast.makeText(this, currentPlayer.toString(), Toast.LENGTH_LONG).show();
 
         Thread t = new Thread(new Runnable() {
             public void run() {
@@ -204,6 +179,34 @@ public class MathQActivity extends AppCompatActivity {
         currentQ = 0;
 
         loadQ(0);
+
+        try{
+            FileInputStream inputStream = openFileInput("PlayerData.txt");
+            Scanner inputStreamScanner = new Scanner(inputStream);
+
+            ArrayList<String> lines  = new ArrayList<String>();
+            while(inputStreamScanner.hasNextLine()){
+                lines.add(inputStreamScanner.nextLine());
+            }
+
+            currentPlayer = new Player(lines.get(0), Integer.parseInt(lines.get(1)), Integer.parseInt(lines.get(2)));
+
+            // Parse physics progress into array
+            Scanner physicsScanner = new Scanner(lines.get(3));
+            physicsScanner.useDelimiter(",");
+            ArrayList<Boolean> physicsProgress = new ArrayList<>();
+
+            while(physicsScanner.hasNext()){
+                physicsProgress.add(new Boolean(physicsScanner.next()));
+            }
+
+            currentPlayer.setPhysicsProgress(physicsProgress);
+        }
+        catch(IOException exception){
+            Log.w("MainActivity", exception.getStackTrace().toString());
+        }
+
+        Toast.makeText(this, currentPlayer.toString(), Toast.LENGTH_LONG).show();
     }
 
     private void changeLabTechPosition() {
@@ -246,6 +249,8 @@ public class MathQActivity extends AppCompatActivity {
                 gameRunning = false;
                 Intent intent = new Intent(MathQActivity.this, MathIslandActivity.class);
                 //TODO database shit
+                currentPlayer.earnExp(points);
+                writeAccount(currentPlayer);
                 startActivity(intent);
             }
             loadQ(currentQ);
@@ -270,5 +275,18 @@ public class MathQActivity extends AppCompatActivity {
             inputAns = 3;
         }
         check();
+    }
+
+    public void writeAccount(Player player){
+        try{
+            FileOutputStream outputStream = openFileOutput("PlayerData.txt", MODE_PRIVATE);
+            OutputStreamWriter outputWriter = new OutputStreamWriter(outputStream);
+            outputWriter.write(player.stringToWrite());
+            outputWriter.flush();
+            outputWriter.close();
+        }
+        catch(IOException exception){
+            Log.w(TAG, exception.getStackTrace().toString());
+        }
     }
 }
