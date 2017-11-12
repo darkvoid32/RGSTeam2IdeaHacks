@@ -68,7 +68,7 @@ public class HomeIslandActivity extends AppCompatActivity implements View.OnTouc
         getSupportActionBar().hide();
 
         try{
-            FileInputStream inputStream = openFileInput("UserAccounts.txt");
+            FileInputStream inputStream = openFileInput("PlayerData.txt");
             Scanner inputStreamScanner = new Scanner(inputStream);
 
             ArrayList<String> lines  = new ArrayList<String>();

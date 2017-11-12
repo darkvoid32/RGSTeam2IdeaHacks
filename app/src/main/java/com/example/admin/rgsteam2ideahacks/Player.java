@@ -86,6 +86,10 @@ public class Player {
         this.exp = exp;
     }
 
+    public void earnExp(int exp){
+        this.exp += exp;
+    }
+
     // Return level of Player with exp
     public int getLevel(){
 

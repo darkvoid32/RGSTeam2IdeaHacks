@@ -193,7 +193,7 @@ public class PhysicsQActivity extends AppCompatActivity {
                 currentQ++;
             } else {
                 gameRunning = false;
-                Intent intent = new Intent(MathQActivity.this, MathIslandActivity.class);
+                Intent intent = new Intent(PhysicsQActivity.this, MathIslandActivity.class);
                 //TODO database shit
                 startActivity(intent);
             }
