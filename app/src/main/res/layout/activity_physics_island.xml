@@ -172,4 +172,34 @@
 
     <!--Button for Island Of Doom [END]-->
 
+    <!--For Settings Button  [START]-->
+
+    <android.support.constraint.Guideline
+        android:id="@+id/settings_bottom"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".1"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/settings_left"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".95"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height= "0dp"
+        android:src="@drawable/cogwheel"
+        android:alpha="0.5"
+        android:layout_margin="5dp"
+        android:id="@+id/settings"
+        android:clickable="true"
+
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"/>
+
+    <!--For Settings Button  [END]-->
+
 </android.support.constraint.ConstraintLayout>

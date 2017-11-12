@@ -1,5 +1,6 @@
 package com.example.admin.rgsteam2ideahacks;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Matrix;
 import android.graphics.PointF;
@@ -67,7 +68,35 @@ public class HomeIslandActivity extends AppCompatActivity implements View.OnTouc
         view.setOnTouchListener(this); // Setting zoom function
         matrix.postScale((float)1.5, (float)1.5, 100, 200);
         view.setImageMatrix(matrix);
+
+        ImageView SettingsWheel = (ImageView) findViewById(R.id.settings);
+
+        SettingsWheel.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                setUpSettingsDialog();
+            }
+        });
     }
+
+    private void setUpSettingsDialog() {
+        // custom dialog
+        final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.settings_dialog);
+
+        // set the custom dialog components - text, image and button
+        Button aboutButton = (Button) dialog.findViewById(R.id.AboutButton);
+
+        // if button is clicked, close the custom dialog
+        aboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
 
     private void setEXPBar() {
 

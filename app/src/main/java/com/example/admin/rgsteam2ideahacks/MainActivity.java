@@ -12,7 +12,10 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -22,6 +25,7 @@ import java.util.Scanner;
 public class MainActivity extends AppCompatActivity {
     private ImageView mainIV, mathIV, physicsIV;
     private HorizontalScrollView scrollView;
+    private TextView usernameTV;
     private Player currentPlayer;
 
     @Override
@@ -73,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Toast.makeText(this, currentPlayer.toString(), Toast.LENGTH_LONG).show();
+
+        if(currentPlayer.getUsername()!=null)
+            usernameTV.setText("Username: " + currentPlayer.getUsername());
     }
 
     private void setUpIslandIV() {
@@ -81,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
         physicsIV = (ImageView) findViewById(R.id.sideIslandPhysicsIV);
 
         scrollView = (HorizontalScrollView) findViewById(R.id.rootScrollView);
+
+        usernameTV = findViewById(R.id.userNameTV);
 
         ViewTreeObserver vto = scrollView.getViewTreeObserver(); // Setting Horizontal scrollView to goto middle (Main island)
 
@@ -96,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final Intent intent = new Intent (MainActivity.this, HomeIslandActivity.class);
                 startActivity(intent);
+                overridePendingTransition( R.anim.movinganim, R.anim.movinganim2 );
             }
         });
 
@@ -103,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final Intent intent = new Intent (MainActivity.this, MathIslandActivity.class);
                 startActivity(intent);
+                overridePendingTransition( R.anim.movinganim, R.anim.movinganim2 );
             }
         });
 
@@ -110,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final Intent intent = new Intent (MainActivity.this, PhysicsIslandActivity.class);
                 startActivity(intent);
+                overridePendingTransition( R.anim.movinganim, R.anim.movinganim2 );
             }
         });
 

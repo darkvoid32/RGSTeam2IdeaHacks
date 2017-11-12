@@ -116,5 +116,16 @@
         android:visibility="gone"
         android:id="@+id/movingCloud"/>
 
+    <TextView
+        style="@style/LineText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Username:"
+        android:textSize="20dp"
+        android:id="@+id/userNameTV"
+        android:textColor="@android:color/black"
+        android:typeface="monospace" />
+
 
 </RelativeLayout>

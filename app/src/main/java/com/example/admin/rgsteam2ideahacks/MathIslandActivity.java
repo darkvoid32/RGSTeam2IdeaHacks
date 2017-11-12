@@ -1,5 +1,6 @@
 package com.example.admin.rgsteam2ideahacks;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 
 /**
  * Created by Gnoh Cheng Yi on 11/11/2017.
@@ -31,6 +33,14 @@ public class MathIslandActivity extends AppCompatActivity{
         btn_geo = findViewById(R.id.btn_geo);
         btn_nt = findViewById(R.id.btn_nt);
         intent = new Intent(getApplicationContext(), DescriptionActivity.class);
+
+        ImageView SettingsWheel = (ImageView) findViewById(R.id.settings);
+
+        SettingsWheel.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                setUpSettingsDialog();
+            }
+        });
     }
 
     public void onAlgebraClick(View v){
@@ -57,6 +67,25 @@ public class MathIslandActivity extends AppCompatActivity{
     public void onBackPressed(){
         Intent intent = new Intent(MathIslandActivity.this, MainActivity.class);
         startActivity(intent);
+    }
+
+    private void setUpSettingsDialog() {
+        // custom dialog
+        final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.settings_dialog);
+
+        // set the custom dialog components - text, image and button
+        Button aboutButton = (Button) dialog.findViewById(R.id.AboutButton);
+
+        // if button is clicked, close the custom dialog
+        aboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 
 }
