@@ -70,7 +70,7 @@ public class DescriptionActivity extends AppCompatActivity {
             intent = new Intent(getApplicationContext(), MathQActivity.class);
         }
 
-        /*else if(topic.contentEquals("f")) {
+        else if(topic.contentEquals("f")) {
             background = res.getDrawable(R.drawable.beach);
             topicString = "Fluid Mechanics";
             firstSentence = "Here is the Horseshoe Bay. It is one of the most relaxing beaches!";
@@ -89,7 +89,7 @@ public class DescriptionActivity extends AppCompatActivity {
             topicString = "Measurements";
             firstSentence = "Here is the Tennis Court. It has the most advanced sports equipment!";
             intent = new Intent(getApplicationContext(), PhysicsQActivity.class);
-        }*/
+        }
 
         thirdSentence = " You can practice your " + topicString + " skills here with some simple " + topicString + " questions.";
         descriptionTextView.setText(firstSentence + thirdSentence + fourthSentence);
