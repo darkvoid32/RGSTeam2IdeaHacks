@@ -1,5 +1,7 @@
 package com.example.admin.rgsteam2ideahacks;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Player {
@@ -12,13 +14,20 @@ public class Player {
 
     // For Physics:
     // Index 0: Visited the Professor
-    private boolean[] physicsProgress = {false};
+    private ArrayList<Boolean> physicsProgress = new ArrayList<>();
 
 
     public Player(String username, int psiDollars, int exp){
         this.username = username;
         this.psiDollars = psiDollars;
         this.exp = exp;
+    }
+
+    public Player(String username, int psiDollars, int exp, ArrayList<Boolean> physicsProgress){
+        this.username = username;
+        this.psiDollars = psiDollars;
+        this.exp = exp;
+        this.physicsProgress = physicsProgress;
     }
 
     /***************************************
@@ -94,18 +103,22 @@ public class Player {
      ****************************************/
 
     public boolean getPhysicsProgress(int index){
-        return physicsProgress[index];
+        return physicsProgress.get(index);
+    }
+
+    public void setPhysicsProgress(ArrayList<Boolean> physicsProgress) {
+        this.physicsProgress = physicsProgress;
     }
 
     /***************************************
-     * Player Data Writing [START]
+     * Player String functions [START]
      ****************************************/
     public String stringToWrite(){
 
         // Convert physics progress to string to write
         String physicsProgressString = "";
-        for(int i = 0; i < physicsProgress.length; i++){
-            if(physicsProgress[i]){
+        for(int i = 0; i < physicsProgress.size(); i++){
+            if(physicsProgress.get(i)){
                     physicsProgressString += "true,";
             }
             else{
@@ -118,4 +131,9 @@ public class Player {
 
     }
 
+    public String toString(){
+        return "Name: " + username +
+               "Psi Dollars: " + psiDollars +
+               "EXP: " + exp;
+    }
 }

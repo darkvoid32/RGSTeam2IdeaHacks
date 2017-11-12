@@ -24,16 +24,10 @@ public class LauncherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        int READ_BLOCK_SIZE = 5;
-
         try{
             FileInputStream inputStream = openFileInput("PlayerData.txt");
             Scanner inputStreamScanner = new Scanner(inputStream);
-            String lineNow = "";
-
-            while(inputStreamScanner.hasNextLine()){
-                lineNow = inputStreamScanner.nextLine();
-            }
+            String lineNow = inputStreamScanner.nextLine();
 
             Intent intent = new Intent(this, MainActivity.class);
             intent.putExtra(EXTRA_MESSAGE, lineNow);
@@ -42,7 +36,7 @@ public class LauncherActivity extends AppCompatActivity {
 
         catch(IOException exception){
             setContentView(R.layout.activity_launcher);
-            usernameET = (EditText) findViewById(R.id.username_edit_text);
+            usernameET = findViewById(R.id.username_edit_text);
         }
 
     }

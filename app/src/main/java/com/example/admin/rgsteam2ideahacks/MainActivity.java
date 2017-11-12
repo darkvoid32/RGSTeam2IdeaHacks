@@ -1,11 +1,7 @@
 package com.example.admin.rgsteam2ideahacks;
 
-import android.app.ActionBar;
 import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.drawable.Animatable;
-import android.os.SystemClock;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,19 +9,20 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView mainIV, mathIV, physicsIV;
     private HorizontalScrollView scrollView;
-    private Animation anim;
-    private ImageView movingCloud;
+    private Player currentPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +32,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getSupportActionBar().hide();
-
-        anim = AnimationUtils.loadAnimation(this, R.anim.movinganim);
-        movingCloud = findViewById(R.id.movingCloud);
 
         //TODO Home page with bird eye view of different islands have clouds floating around
         //TODO Main islands (Graphics)
@@ -50,11 +44,33 @@ public class MainActivity extends AppCompatActivity {
 
         setUpIslandIV();
 
-        Intent intent = getIntent();
+        try{
+            FileInputStream inputStream = openFileInput("UserAccounts.txt");
+            Scanner inputStreamScanner = new Scanner(inputStream);
 
-        String userName = intent.getStringExtra("com.example.admin.rgsteam2ideahacks.username");
+            ArrayList<String> lines  = new ArrayList<String>();
+            while(inputStreamScanner.hasNextLine()){
+                lines.add(inputStreamScanner.nextLine());
+            }
 
-        Toast.makeText(this, userName, Toast.LENGTH_SHORT).show();
+            currentPlayer = new Player(lines.get(0), Integer.parseInt(lines.get(1)), Integer.parseInt(lines.get(2)));
+
+            // Parse physics progress into array
+            Scanner physicsScanner = new Scanner(lines.get(3));
+            physicsScanner.useDelimiter(",");
+            ArrayList<Boolean> physicsProgress = new ArrayList<>();
+
+            while(physicsScanner.hasNext()){
+                physicsProgress.add(new Boolean(physicsScanner.next()));
+            }
+
+            currentPlayer.setPhysicsProgress(physicsProgress);
+        }
+        catch(IOException exception){
+            Log.w("MainActivity", exception.getStackTrace().toString());
+        }
+
+        Toast.makeText(this, currentPlayer.toString(), Toast.LENGTH_LONG).show();
     }
 
     private void setUpIslandIV() {
@@ -77,8 +93,6 @@ public class MainActivity extends AppCompatActivity {
         mainIV.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 final Intent intent = new Intent (MainActivity.this, HomeIslandActivity.class);
-                /*movingCloud.setVisibility(View.VISIBLE);
-                movingCloud.startAnimation(anim);*/
                 startActivity(intent);
             }
         });
@@ -86,8 +100,6 @@ public class MainActivity extends AppCompatActivity {
         mathIV.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 final Intent intent = new Intent (MainActivity.this, MathIslandActivity.class);
-                /*movingCloud.setVisibility(View.VISIBLE);
-                movingCloud.startAnimation(anim);*/
                 startActivity(intent);
             }
         });
@@ -95,8 +107,6 @@ public class MainActivity extends AppCompatActivity {
         physicsIV.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 final Intent intent = new Intent (MainActivity.this, PhysicsIslandActivity.class);
-                /*movingCloud.setVisibility(View.VISIBLE);
-                movingCloud.startAnimation(anim);*/
                 startActivity(intent);
             }
         });
