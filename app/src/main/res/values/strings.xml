@@ -126,8 +126,8 @@
         length, what is the area of the rectangle?"
         "Find the area of a circle with radius 2."
         "Find the area of a circle whose perimeter is 10 pi."
-        "Given an isosceles triangle ABC where AB = AC. If angle ABC = 60 degrees and AB = 10 cm,
-        what is the length of AC?"
+        "Given an isosceles triangle ABC where AB = AC. If angle ABC = 60 degrees and AB = 10
+        cm,what is the length of AC?"
     </array>
     <array name="geoChoices">
         "A) 30xxxB) 60xxxC) 90xxxD) 120"
