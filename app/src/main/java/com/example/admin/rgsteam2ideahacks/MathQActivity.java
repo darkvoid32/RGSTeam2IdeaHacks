@@ -13,12 +13,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 import static java.lang.Thread.sleep;
 
 public class MathQActivity extends AppCompatActivity {
-    Player player;
+    Player currentPlayer;
     Button btn_c1, btn_c2, btn_c3, btn_c4;
     String[] questions, choices, ans;
     TextView tv_question;
@@ -55,6 +59,34 @@ public class MathQActivity extends AppCompatActivity {
 
         tv_question = findViewById(R.id.tv_question);
         String topic = getIntent().getStringExtra("TOPIC");
+
+        try{
+            FileInputStream inputStream = openFileInput("UserAccounts.txt");
+            Scanner inputStreamScanner = new Scanner(inputStream);
+
+            ArrayList<String> lines  = new ArrayList<String>();
+            while(inputStreamScanner.hasNextLine()){
+                lines.add(inputStreamScanner.nextLine());
+            }
+
+            currentPlayer = new Player(lines.get(0), Integer.parseInt(lines.get(1)), Integer.parseInt(lines.get(2)));
+
+            // Parse physics progress into array
+            Scanner physicsScanner = new Scanner(lines.get(3));
+            physicsScanner.useDelimiter(",");
+            ArrayList<Boolean> physicsProgress = new ArrayList<>();
+
+            while(physicsScanner.hasNext()){
+                physicsProgress.add(new Boolean(physicsScanner.next()));
+            }
+
+            currentPlayer.setPhysicsProgress(physicsProgress);
+        }
+        catch(IOException exception){
+            Log.w("MainActivity", exception.getStackTrace().toString());
+        }
+
+        Toast.makeText(this, currentPlayer.toString(), Toast.LENGTH_LONG).show();
 
         Thread t = new Thread(new Runnable() {
             public void run() {
