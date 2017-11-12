@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.admin.rgsteam2ideahacks.MathQActivity">
-
+    <!--p for physics-->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,7 +17,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_question"
+            android:id="@+id/tv_question_p"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="12dp"
@@ -33,7 +33,7 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/labTechIV"
+                android:id="@+id/labTechIV_p"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -49,7 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/textbubble"
-                    android:id="@+id/textBubble"/>
+                    android:id="@+id/textBubble_p"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
                     android:layout_centerInParent="true"
                     android:text="Good Luck"
                     android:textColor="@android:color/black"
-                    android:id="@+id/textBubbleSpeech"/>
+                    android:id="@+id/textBubbleSpeech_p"/>
             </RelativeLayout>
 
             <LinearLayout
@@ -78,7 +78,7 @@
                         android:layout_weight="1">
 
                         <Button
-                            android:id="@+id/btn_c1"
+                            android:id="@+id/btn_c1_p"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
@@ -92,7 +92,7 @@
                         android:layout_weight="1">
 
                         <Button
-                            android:id="@+id/btn_c2"
+                            android:id="@+id/btn_c2_p"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
@@ -114,7 +114,7 @@
                         android:layout_weight="1">
 
                         <Button
-                            android:id="@+id/btn_c3"
+                            android:id="@+id/btn_c3_p"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
@@ -128,7 +128,7 @@
                         android:layout_weight="1">
 
                         <Button
-                            android:id="@+id/btn_c4"
+                            android:id="@+id/btn_c4_p"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
