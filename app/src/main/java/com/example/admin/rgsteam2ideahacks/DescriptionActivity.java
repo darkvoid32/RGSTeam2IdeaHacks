@@ -55,10 +55,15 @@ public class DescriptionActivity extends AppCompatActivity {
 
 
         else if (topic.contentEquals("combi")) {
-
+            background = res.getDrawable(R.drawable.cafe);
+            topicString = "Combinatorics";
+            firstSentence = "Here is the Combinatorics Cafe. It sells the Math Island Classic, Pythagoras Juice!";
         }
 
         else if (topic.contentEquals("geo")) {
+            background = res.getDrawable(R.drawable.school);
+            topicString = "Geometry";
+            firstSentence = "Here is the Geometry School. It is one of the most elite schools in Math Island!";
 
         }
 
