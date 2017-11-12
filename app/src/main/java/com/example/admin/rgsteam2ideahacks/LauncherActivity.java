@@ -12,6 +12,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LauncherActivity extends AppCompatActivity {
@@ -56,6 +57,9 @@ public class LauncherActivity extends AppCompatActivity {
         // If not empty, write account to file
         else{
             Player newPlayer = new Player(username, 0, 0);
+            ArrayList<Boolean> physicsProgress = new ArrayList<>();
+            physicsProgress.add(false);
+            newPlayer.setPhysicsProgress(physicsProgress);
             writeAccount(newPlayer);
         }
     }

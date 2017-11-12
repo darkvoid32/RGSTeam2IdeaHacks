@@ -1,6 +1,7 @@
 package com.example.admin.rgsteam2ideahacks;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,9 +30,9 @@ public class MathQActivity extends AppCompatActivity {
     public static String[] goodLuckMessage = {"Nice Try!", "You can do it!", "Keep going!"};
 
     private ImageView labTechIV;
-    private boolean moveLabTech = false, gameRunning = true, goodLuckMsg = true, getNewMsg = true;
-    private int labTechPosition = 0, labTechMovedAmt = 0, gLAmt = 0, i1 = 0;
-    private TextView speechBubbleText;
+    private boolean moveLabTech = false, gameRunning = true, goodLuckMsg = true, getNewMsg = true, rightWrongShow = false;
+    private int labTechPosition = 0, labTechMovedAmt = 0, gLAmt = 0, i1 = 0, rightWrongTimer = 0;
+    private TextView speechBubbleText, rightWrong;
     private ImageView textBubble;
 
 
@@ -53,6 +54,7 @@ public class MathQActivity extends AppCompatActivity {
         labTechIV = findViewById(R.id.labTechIV);
         textBubble = findViewById(R.id.textBubble);
         speechBubbleText = findViewById(R.id.textBubbleSpeech);
+        rightWrong = findViewById(R.id.rightWrong);
 
 
         tv_question = findViewById(R.id.tv_question);
@@ -122,7 +124,6 @@ public class MathQActivity extends AppCompatActivity {
                             if (goodLuckMsg) {
                                 if (gLAmt < 5) {
                                     gLAmt++;
-                                    Log.i("game running ", String.valueOf(gLAmt));
                                 } else {
                                     runOnUiThread(new Runnable() {
                                         @Override
@@ -132,6 +133,22 @@ public class MathQActivity extends AppCompatActivity {
                                             goodLuckMsg = false;
                                         }
                                     });
+                                }
+                            }
+
+                            if(rightWrongShow){
+                                if(rightWrongTimer<5){
+                                    rightWrongTimer ++;
+                                }
+                                 else {
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            rightWrong.setText("");
+                                        }
+                                    });
+                                    rightWrongTimer = 0;
+                                    rightWrongShow = false;
                                 }
                             }
                         }
@@ -221,7 +238,8 @@ public class MathQActivity extends AppCompatActivity {
         if (inputAns == currentAns) {
             points += 100;
             //Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show();
-
+            rightWrong.setText("Correct!");
+            rightWrong.setTextColor(Color.GREEN);
             if (currentQ + 1 < questions.length) {
                 currentQ++;
             } else {
@@ -234,6 +252,8 @@ public class MathQActivity extends AppCompatActivity {
 
         } else {
             //Toast.makeText(this, "Wrong", Toast.LENGTH_SHORT).show();
+            rightWrong.setText("Wrong!");
+            rightWrong.setTextColor(Color.RED);
             moveLabTech = true;
 
         }

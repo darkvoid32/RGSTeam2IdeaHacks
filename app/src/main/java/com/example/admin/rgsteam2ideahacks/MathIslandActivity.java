@@ -1,19 +1,14 @@
 package com.example.admin.rgsteam2ideahacks;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.Toast;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
+import android.widget.ImageView;
 
 /**
  * Created by Gnoh Cheng Yi on 11/11/2017.
@@ -39,34 +34,13 @@ public class MathIslandActivity extends AppCompatActivity{
         btn_nt = findViewById(R.id.btn_nt);
         intent = new Intent(getApplicationContext(), DescriptionActivity.class);
 
-        try{
-            FileInputStream inputStream = openFileInput("UserAccounts.txt");
-            Scanner inputStreamScanner = new Scanner(inputStream);
+        ImageView SettingsWheel = (ImageView) findViewById(R.id.settings);
 
-            ArrayList<String> lines  = new ArrayList<String>();
-            while(inputStreamScanner.hasNextLine()){
-                lines.add(inputStreamScanner.nextLine());
+        SettingsWheel.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                setUpSettingsDialog();
             }
-
-            player = new Player(lines.get(0), Integer.parseInt(lines.get(1)), Integer.parseInt(lines.get(2)));
-
-            // Parse physics progress into array
-            Scanner physicsScanner = new Scanner(lines.get(3));
-            physicsScanner.useDelimiter(",");
-            ArrayList<Boolean> physicsProgress = new ArrayList<>();
-
-            while(physicsScanner.hasNext()){
-                physicsProgress.add(new Boolean(physicsScanner.next()));
-            }
-
-            player.setPhysicsProgress(physicsProgress);
-        }
-        catch(IOException exception){
-            Log.w("MainActivity", exception.getStackTrace().toString());
-        }
-
-        Toast.makeText(this, player.toString(), Toast.LENGTH_LONG).show();
-
+        });
     }
 
     public void onAlgebraClick(View v){
@@ -93,6 +67,25 @@ public class MathIslandActivity extends AppCompatActivity{
     public void onBackPressed(){
         Intent intent = new Intent(MathIslandActivity.this, MainActivity.class);
         startActivity(intent);
+    }
+
+    private void setUpSettingsDialog() {
+        // custom dialog
+        final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.settings_dialog);
+
+        // set the custom dialog components - text, image and button
+        Button aboutButton = (Button) dialog.findViewById(R.id.AboutButton);
+
+        // if button is clicked, close the custom dialog
+        aboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 
 }

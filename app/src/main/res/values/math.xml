@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--This is only for reference. The actual used resource is in strings.xml.-->
 <resources>
-    <array name="ntQuestions">
+    <!--<array name="ntQuestions">
         "Which of the following is not a prime number?"
         "Which of the following is a prime number?"
         "What is the largest prime factor of 12345?"
@@ -145,5 +145,5 @@
         "B) 4 pi"
         "D) 25 pi"
         "A) 10 cm"
-    </array>
+    </array>-->
 </resources>

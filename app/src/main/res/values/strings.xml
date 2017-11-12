@@ -2,156 +2,156 @@
     <string name="app_name">RGSTeam2IdeaHacks</string>
     <!--math stuff-->
     <array name="ntQuestions">
-        "Which of the following is not a prime number?"
-        "Which of the following is a prime number?"
-        "What is the largest prime factor of 12345?"
-        "Which of the following is not the factor of 142857?"
-        "Which of the following is the closest to 0.5?"
-        "Which of the following is equal to 1/4?"
-        "Which of the following is an improper fraction?"
-        "What is the remainder when 47 is divided by 6?"
-        "What is the remainder when 5^6 = 5x5x5x5x5x5 is divided by 4?"
-        "Given a = 9^10 = 9x9x9x9x9x9x9x9x9x9. Let b be the sum of digits of a. Let c be the sum of
-        digits of b. What is c?"
+        <item>"Which of the following is not a prime number?"</item>
+        <item>"Which of the following is a prime number?"</item>
+        <item>"What is the largest prime factor of 12345?"</item>
+        <item>"Which of the following is not the factor of 142857?"</item>
+        <item>"Which of the following is the closest to 0.5?"</item>
+        <item>"Which of the following is equal to 1/4?"</item>
+        <item>"Which of the following is an improper fraction?"</item>
+        <item>"What is the remainder when 47 is divided by 6?"</item>
+        <item>"What is the remainder when 5^6 = 5x5x5x5x5x5 is divided by 4?"</item>
+        <item>"Given a = 9^10 = 9x9x9x9x9x9x9x9x9x9. Let b be the sum of digits of a. Let c be the sum of
+        digits of b. What is c?"</item>
     </array>
     <array name="ntChoices">
-        "A) 71xxxB) 73xxxC) 77xxxD) 79"
-        "A) 91xxxB) 93xxxC) 97xxxD) 99"
-        "A) 3xxxB) 5xxxC) 823xxxD) 12345"
-        "A) 3xxxB) 11xxxC) 13xxxD) 47"
-        "A) 1/3xxxB) 2/3xxxC) 3/5xxxD) 4/7"
-        "A) 3/12xxxB) 0.24xxxC) 1 - 0.7xxxD) 4/7"
-        "A) 2/3xxxB) 0.5xxxC) 1xxxD) 4/3"
-        "A) 2xxxB) 5xxxC) 4xxxD) 3"
-        "A) 1xxxB) 2xxxC) 3xxxD) 4"
-        "A) 1xxxB) 4xxxC) 8xxxD) 9"
+        <item>"A) 71xxxB) 73xxxC) 77xxxD) 79"</item>
+        <item>"A) 91xxxB) 93xxxC) 97xxxD) 99"</item>
+        <item>"A) 3xxxB) 5xxxC) 823xxxD) 12345"</item>
+        <item>"A) 3xxxB) 11xxxC) 13xxxD) 47"</item>
+        <item>"A) 1/3xxxB) 2/3xxxC) 3/5xxxD) 4/7"</item>
+        <item>"A) 3/12xxxB) 0.24xxxC) 1 - 0.7xxxD) 4/7"</item>
+        <item>"A) 2/3xxxB) 0.5xxxC) 1xxxD) 4/3"</item>
+        <item>"A) 2xxxB) 5xxxC) 4xxxD) 3"</item>
+        <item>"A) 1xxxB) 2xxxC) 3xxxD) 4"</item>
+        <item>"A) 1xxxB) 4xxxC) 8xxxD) 9"</item>
     </array>
     <array name="ntAns">
-        "C) 77"
-        "C) 97"
-        "C) 823"
-        "D) 47"
-        "D) 4/7"
-        "A) 3/12"
-        "D) 4/3"
-        "B) 5"
-        "A) 1"
-        "D) 9"
+        <item>"C) 77"</item>
+        <item>"C) 97"</item>
+        <item>"C) 823"</item>
+        <item>"D) 47"</item>
+        <item>"D) 4/7"</item>
+        <item>"A) 3/12"</item>
+        <item>"D) 4/3"</item>
+        <item>"B) 5"</item>
+        <item>"A) 1"</item>
+        <item>"D) 9"</item>
     </array>
     <array name="agbQuestions">
-        "Simplify: 2(6x + 2) - (3x + 4)"
-        "Given c = (a + 2b)/3. If a = 1 and b = 4, what is c?"
-        "Given x + 1 = 2. What is x?"
-        "Given -2y + 3 = -1, What is y?"
-        "Given z + 1 = 2z + 3. What is z?"
-        "Solve 3(3x + 1) = 10x."
-        "x + 2 = y - 1\ny = 2x\nWhat is x?"
-        "3a + b = 5\n2b + a = 15\nWhat is a?"
-        "Given x^2 + 2 = 4x - 2. What is x?"
-        "Given x^2 + 4x + y^2 - 6y +13 = 0. What is the value of x + y? (Assume x and y are real
-        numbers)"
+        <item>"Simplify: 2(6x + 2) - (3x + 4)"</item>
+        <item>"Given c = (a + 2b)/3. If a = 1 and b = 4, what is c?"</item>
+        <item>"Given x + 1 = 2. What is x?"</item>
+        <item>"Given -2y + 3 = -1, What is y?"</item>
+        <item>"Given z + 1 = 2z + 3. What is z?"</item>
+        <item>"Solve 3(3x + 1) = 10x."</item>
+        <item>"x + 2 = y - 1\ny = 2x\nWhat is x?"</item>
+        <item>"3a + b = 5\n2b + a = 15\nWhat is a?"</item>
+        <item>"Given x^2 + 2 = 4x - 2. What is x?"</item>
+        <item>"Given x^2 + 4x + y^2 - 6y +13 = 0. What is the value of x + y? (Assume x and y are real
+        numbers)"</item>
     </array>
     <array name="agbChoices">
-        "A) 9x xxxB) 12x - 2xxxC) 8xxxD) 3x + 2"
-        "A) 0xxxB) 1xxxC) 2xxxD) 3"
-        "A) 0xxxB) 1xxxC) 2xxxD) 3"
-        "A) 0xxxB) 1xxxC) 2xxxD) 3"
-        "A) 0xxxB) -1xxxC) -2xxxD) -3"
-        "A) 0xxxB) 1xxxC) 2xxxD) 3"
-        "A) 0xxxB) 1xxxC) 2xxxD) 3"
-        "A) 0xxxB) -1xxxC) -2xxxD) -3"
-        "A) 0xxxB) 1xxxC) 2xxxD) 3"
-        "A) 0xxxB) 1xxxC) 2xxxD) 3"
+        <item>"A) 9x xxxB) 12x - 2xxxC) 8xxxD) 3x + 2"</item>
+        <item>"A) 0xxxB) 1xxxC) 2xxxD) 3"</item>
+        <item>"A) 0xxxB) 1xxxC) 2xxxD) 3"</item>
+        <item>"A) 0xxxB) 1xxxC) 2xxxD) 3"</item>
+        <item>"A) 0xxxB) -1xxxC) -2xxxD) -3"</item>
+        <item>"A) 0xxxB) 1xxxC) 2xxxD) 3"</item>
+        <item>"A) 0xxxB) 1xxxC) 2xxxD) 3"</item>
+        <item>"A) 0xxxB) -1xxxC) -2xxxD) -3"</item>
+        <item>"A) 0xxxB) 1xxxC) 2xxxD) 3"</item>
+        <item>"A) 0xxxB) 1xxxC) 2xxxD) 3"</item>
     </array>
     <array name="agbAns">
-        "A) 9x"
-        "D) 3"
-        "B) 1"
-        "C) 2"
-        "C) -2"
-        "D) 3"
-        "D) 3"
-        "B) -1"
-        "C) 2"
-        "A) 1"
+        <item>"A) 9x"</item>
+        <item>"D) 3"</item>
+        <item>"B) 1"</item>
+        <item>"C) 2"</item>
+        <item>"C) -2"</item>
+        <item>"D) 3"</item>
+        <item>"D) 3"</item>
+        <item>"B) -1"</item>
+        <item>"C) 2"</item>
+        <item>"A) 1"</item>
     </array>
     <array name="cbQuestions">
-        "I flip a fair coin. What is the probability that I get a tail?"
-        "I toss a fair coin two times. The first time I get a head. What is the probability that the
-        second time I get a tail?"
-        "I toss a fair dice. What is the probability that I get an even number?"
-        "I toss a fair dice. What is the probability that I get the number '6'?"
-        "I toss a fair dice six times. For the first to fifth times, I get the numbers 1,2,3,4,5
-        respectively. What is the probability that the sixth toss results in the number '6'?"
-        "How many ways are there to arange 3 distinct candies in a straight line?"
-        "How many ways are there to arange 5 distinct books in a straight line?"
-        "How many ways are there to choose 1 car from 3 distinct cars?"
-        "How many ways are there to choose 2 apples from 4 distinct apples?"
-        "Given a + b = 9. What is the number of possible values of a?"
+        <item>"I flip a fair coin. What is the probability that I get a tail?"</item>
+        <item>"I toss a fair coin two times. The first time I get a head. What is the probability that the
+        second time I get a tail?"</item>
+        <item>"I toss a fair dice. What is the probability that I get an even number?"</item>
+        <item>"I toss a fair dice. What is the probability that I get the number '6'?"</item>
+        <item>"I toss a fair dice six times. For the first to fifth times, I get the numbers 1,2,3,4,5
+        respectively. What is the probability that the sixth toss results in the number '6'?"</item>
+        <item>"How many ways are there to arange 3 distinct candies in a straight line?"</item>
+        <item>"How many ways are there to arange 5 distinct books in a straight line?"</item>
+        <item>"How many ways are there to choose 1 car from 3 distinct cars?"</item>
+        <item>"How many ways are there to choose 2 apples from 4 distinct apples?"</item>
+        <item>"Given a + b = 9. What is the number of possible values of a?"</item>
 
     </array>
     <array name="cbChoices">
-        "A) 0.2xxxB) 0.3xxxC) 0.4xxxD0 0.5"
-        "A) 1xxxB) 1/2xxxC) 1/3xxxD) 1/6"
-        "A) 0.2xxxB) 0.3xxxC) 0.4xxxD0 0.5"
-        "A) 1/2xxxB) 1/3xxxC) 1/4xxxD) 1/6"
-        "A) 1xxxB) 1/2xxxC) 1/3xxxD) 1/6"
-        "A) 1xxxB) 3xxxC) 6xxxD) 12"
-        "A) 120xxxB) 15xxxC) 25xxxD) 24"
-        "A) 0xxxB) 1xxxC) 2xxxD) 3"
-        "A) 2xxxB) 4xxxC) 6xxxD) 8"
-        "A) 4xxxB) 5xxxC) 9xxxD) infinity"
+        <item>"A) 0.2xxxB) 0.3xxxC) 0.4xxxD0 0.5"</item>
+        <item>"A) 1xxxB) 1/2xxxC) 1/3xxxD) 1/6"</item>
+        <item>"A) 0.2xxxB) 0.3xxxC) 0.4xxxD0 0.5"</item>
+        <item>"A) 1/2xxxB) 1/3xxxC) 1/4xxxD) 1/6"</item>
+        <item>"A) 1xxxB) 1/2xxxC) 1/3xxxD) 1/6"</item>
+        <item>"A) 1xxxB) 3xxxC) 6xxxD) 12"</item>
+        <item>"A) 120xxxB) 15xxxC) 25xxxD) 24"</item>
+        <item>"A) 0xxxB) 1xxxC) 2xxxD) 3"</item>
+        <item>"A) 2xxxB) 4xxxC) 6xxxD) 8"</item>
+        <item>"A) 4xxxB) 5xxxC) 9xxxD) infinity"</item>
     </array>
     <array name="cbAns">
-        "D) 0.5"
-        "B) 1/2"
-        "D) 0.5"
-        "D) 1/6"
-        "D) 1/6"
-        "C) 6"
-        "A) 120"
-        "D) 3"
-        "C) 6"
-        "D) infinity"
+        <item>"D) 0.5"</item>
+        <item>"B) 1/2"</item>
+        <item>"D) 0.5"</item>
+        <item>"D) 1/6"</item>
+        <item>"D) 1/6"</item>
+        <item>"C) 6"</item>
+        <item>"A) 120"</item>
+        <item>"D) 3"</item>
+        <item>"C) 6"</item>
+        <item>"D) infinity"</item>
     </array>
     <array name="geoQuestions">
-        "What is the interior angle of an equilateral triangle in degrees?"
-        "What is the interior angle of a rectangle in degrees?"
-        "Given two angles of a triangle are 30 and 60 degrees. What is the third angle in degrees?"
-        "Given an isosceles triangle ABC where AB = AC. If angle BAC = 40 degrees, what is angle ABC
-        in degrees?"
-        "Find the area of a square with side length 5."
-        "Find the area of a rectangle with length 3 and width 5."
-        "Given the length of a rectangle is 4. If the width of the rectangle is 2 less than its
-        length, what is the area of the rectangle?"
-        "Find the area of a circle with radius 2."
-        "Find the area of a circle whose perimeter is 10 pi."
-        "Given an isosceles triangle ABC where AB = AC. If angle ABC = 60 degrees and AB = 10
-        cm,what is the length of AC?"
+        <item>"What is the interior angle of an equilateral triangle in degrees?"</item>
+        <item>"What is the interior angle of a rectangle in degrees?"</item>
+        <item>"Given two angles of a triangle are 30 and 60 degrees. What is the third angle in degrees?"</item>
+        <item>"Given an isosceles triangle ABC where AB = AC. If angle BAC = 40 degrees, what is angle ABC
+        in degrees?"</item>
+        <item>"Find the area of a square with side length 5."</item>
+        <item>"Find the area of a rectangle with length 3 and width 5."</item>
+        <item>"Given the length of a rectangle is 4. If the width of the rectangle is 2 less than its
+        length, what is the area of the rectangle?"</item>
+        <item>"Find the area of a circle with radius 2."</item>
+        <item>"Find the area of a circle whose perimeter is 10 pi."</item>
+        <item>"Given an isosceles triangle ABC where AB = AC. If angle ABC = 60 degrees and AB = 10
+        cm,what is the length of AC?"</item>
     </array>
     <array name="geoChoices">
-        "A) 30xxxB) 60xxxC) 90xxxD) 120"
-        "A) 30xxxB) 60xxxC) 90xxxD) 120"
-        "A) 30xxxB) 60xxxC) 90xxxD) 120"
-        "A) 50xxxB) 60xxxC) 70xxxD) 80"
-        "A) 5xxxB) 10xxxC) 15xxxD) 25"
-        "A) 15xxxB) 20xxxC) 25xxxD) 30"
-        "A) 4xxxB) 8xxxC) 16xxxD) 24"
-        "A) 3 pixxxB) 4 pixxxC) 5 pixxxD) 6 pixxx"
-        "A) 10 pixxxB) 15 pixxxC) 20 pixxxD) 25 pi"
-        "A) 10 cmxxxB) 5 cmxxxC) 15 cmxxxD) 20 cm"
+        <item>"A) 30xxxB) 60xxxC) 90xxxD) 120"</item>
+        <item>"A) 30xxxB) 60xxxC) 90xxxD) 120"</item>
+        <item>"A) 30xxxB) 60xxxC) 90xxxD) 120"</item>
+        <item>"A) 50xxxB) 60xxxC) 70xxxD) 80"</item>
+        <item>"A) 5xxxB) 10xxxC) 15xxxD) 25"</item>
+        <item>"A) 15xxxB) 20xxxC) 25xxxD) 30"</item>
+        <item>"A) 4xxxB) 8xxxC) 16xxxD) 24"</item>
+        <item>"A) 3 pixxxB) 4 pixxxC) 5 pixxxD) 6 pixxx"</item>
+        <item>"A) 10 pixxxB) 15 pixxxC) 20 pixxxD) 25 pi"</item>
+        <item>"A) 10 cmxxxB) 5 cmxxxC) 15 cmxxxD) 20 cm"</item>
     </array>
     <array name="geoAns">
-        "B) 60"
-        "C) 90"
-        "C) 90"
-        "C) 70"
-        "D) 25"
-        "A) 15"
-        "B) 8"
-        "B) 4 pi"
-        "D) 25 pi"
-        "A) 10 cm"
+        <item>"B) 60"</item>
+        <item>"C) 90"</item>
+        <item>"C) 90"</item>
+        <item>"C) 70"</item>
+        <item>"D) 25"</item>
+        <item>"A) 15"</item>
+        <item>"B) 8"</item>
+        <item>"B) 4 pi"</item>
+        <item>"D) 25 pi"</item>
+        <item>"A) 10 cm"</item>
     </array>
 
     <!--Physics stuff-->

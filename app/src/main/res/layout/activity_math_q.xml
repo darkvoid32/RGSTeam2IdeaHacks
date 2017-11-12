@@ -16,16 +16,31 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_question"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="12dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/grobold"
-            android:gravity="center"
-            android:textColor="@android:color/black"
-            android:textSize="25sp" />
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/grobold"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rightWrong"
+                android:fontFamily="@font/grobold"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:layout_below="@+id/tv_question"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -46,20 +61,20 @@
                 android:layout_centerHorizontal="true">
 
                 <ImageView
+                    android:id="@+id/textBubble"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/textbubble"
-                    android:id="@+id/textBubble"/>
+                    android:src="@drawable/textbubble" />
 
                 <TextView
+                    android:id="@+id/textBubbleSpeech"
+                    style="@style/LineText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/LineText"
-                    android:textSize="10sp"
                     android:layout_centerInParent="true"
                     android:text="Good Luck"
                     android:textColor="@android:color/black"
-                    android:id="@+id/textBubbleSpeech"/>
+                    android:textSize="10sp" />
             </RelativeLayout>
 
             <LinearLayout
@@ -141,5 +156,15 @@
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height= "25dp"
+        android:src="@drawable/cogwheel"
+        android:layout_alignParentRight="true"
+        android:alpha="0.5"
+        android:layout_margin="5dp"
+        android:id="@+id/settings"
+        android:clickable="true"/>
 
 </RelativeLayout>
