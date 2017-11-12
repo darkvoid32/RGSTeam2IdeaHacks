@@ -23,10 +23,25 @@ public class PhysicsIslandActivity extends AppCompatActivity {
         intent = new Intent(getApplicationContext(), DescriptionActivity.class);
     }
 
-    public void onClick_p(View v) {
-        if (v.getId() == R.id.btn_horseshoe) {
+    public void onHorseshoeClick(View v){
+        //fluid
+        intent.putExtra("TOPIC", "f");
+        startActivity(intent);
+    }
 
-        }
+    public void onCombiClick(View v){
+        intent.putExtra("TOPIC", "combi");
+        startActivity(intent);
+    }
+
+    public void onGeoClick(View v){
+        intent.putExtra("TOPIC", "geo");
+        startActivity(intent);
+    }
+
+    public void onNTClick(View v){
+        intent.putExtra("TOPIC", "nt");
+        startActivity(intent);
     }
 
     @Override
