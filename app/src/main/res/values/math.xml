@@ -37,38 +37,90 @@
         "D) 9"
     </array>
     <array name="agbQuestions">
+        "Simplify: 2(6x + 2) - (3x + 4)"
+        "Given c = (a + 2b)/3. If a = 1 and b = 4, what is c?"
         "Given x + 1 = 2. What is x?"
         "Given -2y + 3 = -1, What is y?"
+        "Given z + 1 = 2z + 3. What is z?"
+        "Solve 3(3x + 1) = 10x."
+        "x + 2 = y - 1\ny = 2x\nWhat is x?"
+        "3a + b = 5\n2b + a = 15\nWhat is a?"
+        "Given x^2 + 2 = 4x - 2. What is x?"
+        "Given x^2 + 4x + y^2 - 6y +13 = 0. What is the value of x + y? (Assume x and y are real numbers)"
     </array>
     <array name="agbChoices">
+        "A) 9x xxxB) 12x - 2xxxC) 8xxxD) 3x + 2"
+        "A) 0xxxB) 1xxxC) 2xxxD) 3"
+        "A) 0xxxB) 1xxxC) 2xxxD) 3"
+        "A) 0xxxB) 1xxxC) 2xxxD) 3"
+        "A) 0xxxB) -1xxxC) -2xxxD) -3"
+        "A) 0xxxB) 1xxxC) 2xxxD) 3"
+        "A) 0xxxB) 1xxxC) 2xxxD) 3"
+        "A) 0xxxB) -1xxxC) -2xxxD) -3"
         "A) 0xxxB) 1xxxC) 2xxxD) 3"
         "A) 0xxxB) 1xxxC) 2xxxD) 3"
     </array>
     <array name="agbAns">
+        "A) 9x"
+        "D) 3"
         "B) 1"
         "C) 2"
+        "C) -2"
+        "D) 3"
+        "D) 3"
+        "B) -1"
+        "C) 2"
+        "A) 1"
     </array>
     <array name="cbQuestions">
-        "How many ways are there to arange 5 distinct books in a straight line?"
         "I flip a fair coin. What is the probability that I get a tail?"
+        "I toss a fair coin two times. The first time I get a head. What is the probability that the second time I get a tail?"
+        "I toss a fair dice. What is the probability that I get an even number?"
+        "I toss a fair dice. What is the probability that I get the number '6'?"
+        "I toss a fair dice six times. For the first to fifth times, I get the numbers 1,2,3,4,5 respectively. What is the probability that the sixth toss results in the number '6'?"
+        "How many ways are there to arange 3 distinct candies in a straight line?"
+        "How many ways are there to arange 5 distinct books in a straight line?"
+        "How many ways are there to choose 1 car from 3 distinct cars?"
+        "How many ways are there to choose 2 apples from 4 distinct apples?"
+        "Given a + b = 9. What is the number of possible values of a?"
+
     </array>
     <array name="cbChoices">
-        "A) 120xxxB) 15xxxC) 25xxxD) 24"
         "A) 0.2xxxB) 0.3xxxC) 0.4xxxD0 0.5"
+        "A) 1xxxB) 1/2xxxC) 1/3xxxD) 1/6"
+        "A) 0.2xxxB) 0.3xxxC) 0.4xxxD0 0.5"
+        "A) 1/2xxxB) 1/3xxxC) 1/4xxxD) 1/6"
+        "A) 1xxxB) 1/2xxxC) 1/3xxxD) 1/6"
+        "A) 1xxxB) 3xxxC) 6xxxD) 12"
+        "A) 120xxxB) 15xxxC) 25xxxD) 24"
+        "A) 0xxxB) 1xxxC) 2xxxD) 3"
+        "A) 2xxxB) 4xxxC) 6xxxD) 8"
+        "A) 4xxxB) 5xxxC) 9xxxD) infinity"
     </array>
     <array name="cbAns">
-        "A) 120"
         "D) 0.5"
+        "B) 1/2"
+        "D) 0.5"
+        "D) 1/6"
+        "D) 1/6"
+        "C) 6"
+        "A) 120"
+        "D) 3"
+        "C) 6"
+        "D) infinity"
     </array>
     <array name="geoQuestions">
+        "Given two angles of a triangle are 30 and 60 degrees. What is the third angle in degrees?"
         "Find the area of a square with side length 5."
         "Find the area of a circle with radius 2."
     </array>
     <array name="geoChoices">
+        "A) 30xxxB) 60xxxC) 90xxxD) 120"
         "A) 5xxxB) 10xxxC) 15xxxD) 25"
         "A) 3 pixxxB) 4 pixxxC) 5 pixxxD) 6 pixxx"
     </array>
     <array name="geoAns">
+        "C) 90"
         "D) 25"
         "B) 4 pi"
     </array>
