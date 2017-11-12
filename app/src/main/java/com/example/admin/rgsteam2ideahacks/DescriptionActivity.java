@@ -2,6 +2,7 @@ package com.example.admin.rgsteam2ideahacks;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -45,6 +46,7 @@ public class DescriptionActivity extends AppCompatActivity {
             background = res.getDrawable(R.drawable.tower);
             topicString = "Algebra";
             firstSentence = "Here is the Algebra Tower. It is the tallest building ever built!";
+            descriptionTextView.setTextColor(Color.parseColor("#000000"));
             intent = new Intent(getApplicationContext(), MathQActivity.class);
         }
 
@@ -52,6 +54,7 @@ public class DescriptionActivity extends AppCompatActivity {
             background = res.getDrawable(R.drawable.park);
             topicString = "Number Theory";
             firstSentence = "Here is the Number Theory Park. It is one of the most popular parks around!";
+            descriptionTextView.setTextColor(Color.parseColor("#000000"));
             intent = new Intent(getApplicationContext(), MathQActivity.class);
         }
 
@@ -60,6 +63,7 @@ public class DescriptionActivity extends AppCompatActivity {
             background = res.getDrawable(R.drawable.cafe);
             topicString = "Combinatorics";
             firstSentence = "Here is the Combinatorics Cafe. It sells the Math Island Classic, Pythagoras Juice!";
+            descriptionTextView.setTextColor(Color.parseColor("#000000"));
             intent = new Intent(getApplicationContext(), MathQActivity.class);
         }
 
@@ -67,6 +71,7 @@ public class DescriptionActivity extends AppCompatActivity {
             background = res.getDrawable(R.drawable.school);
             topicString = "Geometry";
             firstSentence = "Here is the Geometry School. It is one of the most elite schools in Math Island!";
+            descriptionTextView.setTextColor(Color.parseColor("#000000"));
             intent = new Intent(getApplicationContext(), MathQActivity.class);
         }
 
@@ -74,6 +79,7 @@ public class DescriptionActivity extends AppCompatActivity {
             background = res.getDrawable(R.drawable.beach);
             topicString = "Fluid Mechanics";
             firstSentence = "Here is the Horseshoe Bay. It is one of the most relaxing beaches!";
+            descriptionTextView.setTextColor(Color.parseColor("#000000"));
             intent = new Intent(getApplicationContext(), PhysicsQActivity.class);
         }
 
@@ -81,6 +87,7 @@ public class DescriptionActivity extends AppCompatActivity {
             background = res.getDrawable(R.drawable.court);
             topicString = "Kinematics";
             firstSentence = "Here is the Tennis Court. It has the most advanced sports equipment!";
+            descriptionTextView.setTextColor(Color.parseColor("#000000"));
             intent = new Intent(getApplicationContext(), PhysicsQActivity.class);
         }
 
@@ -88,6 +95,7 @@ public class DescriptionActivity extends AppCompatActivity {
             background = res.getDrawable(R.drawable.lab);
             topicString = "Measurements";
             firstSentence = "Here is the Professor Lab. It is where new formulas are formed!";
+            descriptionTextView.setTextColor(Color.parseColor("#FFFFFF"));
             intent = new Intent(getApplicationContext(), PhysicsQActivity.class);
         }
 
