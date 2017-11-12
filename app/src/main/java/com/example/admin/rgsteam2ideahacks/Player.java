@@ -12,7 +12,7 @@ public class Player {
 
     // For Physics:
     // Index 0: Visited the Professor
-    private boolean[] physicsProgress = new boolean[1];
+    private boolean[] physicsProgress = {false};
 
 
     public Player(String username, int psiDollars, int exp){
