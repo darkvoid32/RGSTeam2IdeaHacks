@@ -23,7 +23,6 @@ public class LauncherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_launcher);
 
         int READ_BLOCK_SIZE = 5;
 
@@ -42,14 +41,17 @@ public class LauncherActivity extends AppCompatActivity {
         }
 
         catch(IOException exception){
-            usernameET = (EditText) findViewById(R.id.username_edit_text);
             setContentView(R.layout.activity_launcher);
+            usernameET = (EditText) findViewById(R.id.username_edit_text);
         }
 
     }
 
     public void createAccount(View view){
-        String username = usernameET.getText().toString();
+        String username = "";
+        if(usernameET!=null) {
+            username = usernameET.getText().toString();
+        }
 
         // Checks if EditText is empty
         if (username.equals("")){
