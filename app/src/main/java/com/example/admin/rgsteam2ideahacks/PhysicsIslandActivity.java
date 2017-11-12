@@ -3,8 +3,10 @@ package com.example.admin.rgsteam2ideahacks;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public class PhysicsIslandActivity extends AppCompatActivity {
 
@@ -19,9 +21,14 @@ public class PhysicsIslandActivity extends AppCompatActivity {
 
     }
 
+    public void onDoomClick(View v){
+        Toast.makeText(this, "Coming soon", Toast.LENGTH_LONG).show();
+    }
+
     @Override
     public void onBackPressed(){
         Intent intent = new Intent(PhysicsIslandActivity.this, MainActivity.class);
         startActivity(intent);
     }
+
 }

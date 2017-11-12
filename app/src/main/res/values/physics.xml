@@ -1,4 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--fluid mechanics-->
+    <string-array name="fQuestions">
+        <item>The mass and volume of a human are 70 kg and 0.0711 m^3 respectively. What is the human's density in kg/m^3?</item>
+        <item>The density of water is 1000 kg/m^3</item>
+    </string-array>
+    <string-array name="fChoices">
+        <item>"A) 985...B) 4.98...C) 70.1...D) 69.9</item>
+    </string-array>
+    <string-array name="fAns">
+        <item>"A) 985</item>
+    </string-array>
 
+    <!--Kinematics-->
+    <string-array name="kQuestions">
+        <item></item>
+    </string-array>
+    <string-array name="kChoices">
+        <item></item>
+    </string-array>
+    <string-array name="kAns">
+        <item></item>
+    </string-array>
+
+    <!--Measurement-->
+    <string-array name="mQuestions">
+        <item></item>
+    </string-array>
+    <string-array name="mChoices">
+        <item></item>
+    </string-array>
+    <string-array name="mAns">
+        <item></item>
+    </string-array>
 </resources>

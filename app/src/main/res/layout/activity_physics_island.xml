@@ -168,7 +168,8 @@
         app:layout_constraintLeft_toRightOf="@id/doom_left"
         app:layout_constraintTop_toBottomOf="@id/doom_top"
         app:layout_constraintRight_toLeftOf="@id/doom_right"
-        app:layout_constraintBottom_toTopOf="@id/doom_bottom"/>
+        app:layout_constraintBottom_toTopOf="@id/doom_bottom"
+        android:onClick="onDoomClick"/>
 
     <!--Button for Island Of Doom [END]-->
 
