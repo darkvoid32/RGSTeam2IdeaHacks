@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView mainIV, mathIV, physicsIV;
@@ -39,6 +40,12 @@ public class MainActivity extends AppCompatActivity {
         //TODO Finish setting settings for other activities
 
         setUpIslandIV();
+
+        Intent intent = getIntent();
+
+        String userName = intent.getStringExtra("com.example.admin.rgsteam2ideahacks.username");
+
+        Toast.makeText(this, userName, Toast.LENGTH_SHORT).show();
     }
 
     private void setUpIslandIV() {

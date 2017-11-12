@@ -51,8 +51,8 @@ public class MathQActivity extends AppCompatActivity {
     public static String[] goodLuckMessage = {"Nice Try!", "You can do it!", "Keep going!"};
 
     private ImageView labTechIV;
-    private boolean moveLabTech = false, gameRunning = true, goodLuckMsg = true;
-    private int labTechPosition = 0, labTechMovedAmt = 0, gLAmt = 0;
+    private boolean moveLabTech = false, gameRunning = true, goodLuckMsg = true, getNewMsg = true;
+    private int labTechPosition = 0, labTechMovedAmt = 0, gLAmt = 0, i1 = 0;
     private TextView speechBubbleText;
     private ImageView textBubble;
 
@@ -89,9 +89,12 @@ public class MathQActivity extends AppCompatActivity {
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
+                                        if (getNewMsg) {
+                                            i1 = r.nextInt((goodLuckMessage.length - 0) + 0);
+                                            getNewMsg = false;
+                                        }
                                         changeLabTechPosition();
                                         labTechMovedAmt++;
-                                        int i1 = r.nextInt((goodLuckMessage.length - 0) + 0);
                                         textBubble.setVisibility(View.VISIBLE);
                                         speechBubbleText.setVisibility(View.VISIBLE);
                                         speechBubbleText.setText(goodLuckMessage[i1]);
@@ -104,6 +107,7 @@ public class MathQActivity extends AppCompatActivity {
                                         textBubble.setVisibility(View.GONE);
                                         speechBubbleText.setVisibility(View.GONE);
                                         labTechMovedAmt = 0;
+                                        getNewMsg = true;
                                         moveLabTech = false;
                                     }
                                 });
