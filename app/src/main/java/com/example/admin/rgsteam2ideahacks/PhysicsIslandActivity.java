@@ -1,12 +1,11 @@
 package com.example.admin.rgsteam2ideahacks;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.Toast;
 
 public class PhysicsIslandActivity extends AppCompatActivity {
@@ -29,19 +28,18 @@ public class PhysicsIslandActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onCombiClick(View v){
-        intent.putExtra("TOPIC", "combi");
+    public void onTennisClick(View v){
+        intent.putExtra("TOPIC", "k");
         startActivity(intent);
     }
 
-    public void onGeoClick(View v){
-        intent.putExtra("TOPIC", "geo");
+    public void onProfessorClick(View v){
+        intent.putExtra("TOPIC", "m");
         startActivity(intent);
     }
 
-    public void onNTClick(View v){
-        intent.putExtra("TOPIC", "nt");
-        startActivity(intent);
+    public void onDoomClick(View v){
+        Toast.makeText(this, "Coming soon!", Toast.LENGTH_LONG).show();
     }
 
     @Override
