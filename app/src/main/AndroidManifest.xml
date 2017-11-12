@@ -34,6 +34,10 @@
             android:name=".MathIslandActivity"
             android:screenOrientation="sensorLandscape">
         </activity>
+        <activity
+            android:name=".DescriptionActivity"
+            android:screenOrientation="sensorLandscape">
+        </activity>
 
         <activity android:name=".MathQActivity"
             android:screenOrientation="sensorLandscape">
