@@ -97,4 +97,25 @@ public class Player {
         return physicsProgress[index];
     }
 
+    /***************************************
+     * Player Data Writing [START]
+     ****************************************/
+    public String stringToWrite(){
+
+        // Convert physics progress to string to write
+        String physicsProgressString = "";
+        for(int i = 0; i < physicsProgress.length; i++){
+            if(physicsProgress[i]){
+                    physicsProgressString += "true,";
+            }
+            else{
+                physicsProgressString += "false,";
+            }
+        }
+        physicsProgressString = physicsProgressString.substring(0, physicsProgressString.length() - 1);
+
+        return username + "\n" + psiDollars + "\n" + exp + "\n" + physicsProgressString;
+
+    }
+
 }
