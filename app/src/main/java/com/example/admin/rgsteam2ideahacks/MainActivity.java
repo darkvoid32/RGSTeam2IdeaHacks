@@ -1,6 +1,7 @@
 package com.example.admin.rgsteam2ideahacks;
 
 import android.app.ActionBar;
+import android.app.Dialog;
 import android.content.Intent;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         //TODO Settings shit
         //TODO Achievement shit (Later)
         //TODO Level shit (Later)
+        //TODO Finish setting settings for other activities
 
         setUpIslandIV();
     }
@@ -46,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         scrollView = (HorizontalScrollView) findViewById(R.id.rootScrollView);
 
         ViewTreeObserver vto = scrollView.getViewTreeObserver(); // Setting Horizontal scrollView to goto middle (Main island)
+
         vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             public void onGlobalLayout() {
                 scrollView.scrollTo(scrollView.getChildAt(0).getWidth()/3, 0);
@@ -74,6 +78,33 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ImageView SettingsWheel = (ImageView) findViewById(R.id.settings);
+
+        SettingsWheel.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                setUpSettingsDialog();
+            }
+        });
+    }
+
+    private void setUpSettingsDialog() {
+        // custom dialog
+        final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.settings_dialog);
+
+        // set the custom dialog components - text, image and button
+        Button aboutButton = (Button) dialog.findViewById(R.id.AboutButton);
+
+        // if button is clicked, close the custom dialog
+        aboutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 
 }
