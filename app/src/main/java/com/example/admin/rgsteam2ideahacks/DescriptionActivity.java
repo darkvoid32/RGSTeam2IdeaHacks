@@ -45,12 +45,14 @@ public class DescriptionActivity extends AppCompatActivity {
             background = res.getDrawable(R.drawable.tower);
             topicString = "Algebra";
             firstSentence = "Here is the Algebra Tower. It is the tallest building ever built!";
+            intent = new Intent(getApplicationContext(), MathQActivity.class);
         }
 
         else if (topic.contentEquals("nt")) {
             background = res.getDrawable(R.drawable.park);
             topicString = "Number Theory";
             firstSentence = "Here is the Number Theory Park. It is one of the most popular parks around!";
+            intent = new Intent(getApplicationContext(), MathQActivity.class);
         }
 
 
@@ -58,36 +60,40 @@ public class DescriptionActivity extends AppCompatActivity {
             background = res.getDrawable(R.drawable.cafe);
             topicString = "Combinatorics";
             firstSentence = "Here is the Combinatorics Cafe. It sells the Math Island Classic, Pythagoras Juice!";
+            intent = new Intent(getApplicationContext(), MathQActivity.class);
         }
 
         else if (topic.contentEquals("geo")) {
             background = res.getDrawable(R.drawable.school);
             topicString = "Geometry";
             firstSentence = "Here is the Geometry School. It is one of the most elite schools in Math Island!";
+            intent = new Intent(getApplicationContext(), MathQActivity.class);
         }
 
-        /*else if(topic.contentEquals("xx")) {
+        /*else if(topic.contentEquals("f")) {
             background = res.getDrawable(R.drawable.beach);
             topicString = "Fluid Mechanics";
             firstSentence = "Here is the Horseshoe Bay. It is one of the most relaxing beaches!";
+            intent = new Intent(getApplicationContext(), PhysicsQActivity.class);
         }
 
-        else if(topic.contentEquals("ts")) {
+        else if(topic.contentEquals("k")) {
             background = res.getDrawable(R.drawable.court);
             topicString = "Kinematics";
             firstSentence = "Here is the Tennis Court. It has the most advanced sports equipment!";
+            intent = new Intent(getApplicationContext(), PhysicsQActivity.class);
         }
 
-        else if(topic.contentEquals("ts")) {
-            background = res.getDrawable(R.drawable.court);
+        else if(topic.contentEquals("m")) {
+            background = res.getDrawable(R.drawable.lab);
             topicString = "Measurements";
             firstSentence = "Here is the Tennis Court. It has the most advanced sports equipment!";
+            intent = new Intent(getApplicationContext(), PhysicsQActivity.class);
         }*/
 
         thirdSentence = " You can practice your " + topicString + " skills here with some simple " + topicString + " questions.";
         descriptionTextView.setText(firstSentence + thirdSentence + fourthSentence);
         descriptionLayout.setBackground(background);
-        intent = new Intent(getApplicationContext(), MathQActivity.class);
     }
 
     public void onOkClick(View view){
