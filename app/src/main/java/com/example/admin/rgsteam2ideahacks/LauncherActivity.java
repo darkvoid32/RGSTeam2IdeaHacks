@@ -41,8 +41,8 @@ public class LauncherActivity extends AppCompatActivity {
         }
 
         catch(IOException exception){
-            usernameET = (EditText) findViewById(R.id.username_edit_text);
             setContentView(R.layout.activity_launcher);
+            usernameET = (EditText) findViewById(R.id.username_edit_text);
         }
 
     }
