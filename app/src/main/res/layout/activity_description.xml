@@ -9,16 +9,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="70dp"
-        android:orientation="vertical"
-        android:background="#FFFFFF">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/descriptionText"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:textSize="30sp"
-            android:fontFamily="@font/grobold"
-            android:layout_weight="4"/>
+            android:layout_weight="4">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/descriptionText"
+                android:textSize="25sp"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/grobold"/>
+
+        </ScrollView>
+
 
         <Button
             android:id="@+id/okButton"
