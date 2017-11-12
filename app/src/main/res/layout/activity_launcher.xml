@@ -10,13 +10,14 @@
 
     <EditText
         android:id="@+id/username_edit_text"
-        android:text="Username"
+        android:hint="Username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
         android:text="Create Account"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:onClick="createAccount"/>
 
 </LinearLayout>

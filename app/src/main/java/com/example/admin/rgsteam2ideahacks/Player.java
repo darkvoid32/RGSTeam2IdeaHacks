@@ -12,7 +12,7 @@ public class Player {
 
     // For Physics:
     // Index 0: Visited the Professor
-    private boolean[] physicsProgress = new boolean[1];
+    private boolean[] physicsProgress = {false};
 
 
     public Player(String username, int psiDollars, int exp){
@@ -95,6 +95,27 @@ public class Player {
 
     public boolean getPhysicsProgress(int index){
         return physicsProgress[index];
+    }
+
+    /***************************************
+     * Player Data Writing [START]
+     ****************************************/
+    public String stringToWrite(){
+
+        // Convert physics progress to string to write
+        String physicsProgressString = "";
+        for(int i = 0; i < physicsProgress.length; i++){
+            if(physicsProgress[i]){
+                    physicsProgressString += "true,";
+            }
+            else{
+                physicsProgressString += "false,";
+            }
+        }
+        physicsProgressString = physicsProgressString.substring(0, physicsProgressString.length() - 1);
+
+        return username + "\n" + psiDollars + "\n" + exp + "\n" + physicsProgressString;
+
     }
 
 }
