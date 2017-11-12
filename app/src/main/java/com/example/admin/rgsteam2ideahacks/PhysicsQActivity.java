@@ -12,12 +12,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 import static java.lang.Thread.sleep;
 
 public class PhysicsQActivity extends AppCompatActivity {
-    Player player;
+    Player currentPlayer;
     Button btn_c1, btn_c2, btn_c3, btn_c4;
     String[] questions, choices, ans;
     TextView tv_question;
@@ -145,6 +149,34 @@ public class PhysicsQActivity extends AppCompatActivity {
         currentQ = 0;
 
         loadQ(0);
+
+        try{
+            FileInputStream inputStream = openFileInput("PlayerData.txt");
+            Scanner inputStreamScanner = new Scanner(inputStream);
+
+            ArrayList<String> lines  = new ArrayList<String>();
+            while(inputStreamScanner.hasNextLine()){
+                lines.add(inputStreamScanner.nextLine());
+            }
+
+            currentPlayer = new Player(lines.get(0), Integer.parseInt(lines.get(1)), Integer.parseInt(lines.get(2)));
+
+            // Parse physics progress into array
+            Scanner physicsScanner = new Scanner(lines.get(3));
+            physicsScanner.useDelimiter(",");
+            ArrayList<Boolean> physicsProgress = new ArrayList<>();
+
+            while(physicsScanner.hasNext()){
+                physicsProgress.add(new Boolean(physicsScanner.next()));
+            }
+
+            currentPlayer.setPhysicsProgress(physicsProgress);
+        }
+        catch(IOException exception){
+            Log.w("MainActivity", exception.getStackTrace().toString());
+        }
+
+        Toast.makeText(this, currentPlayer.toString(), Toast.LENGTH_LONG).show();
     }
 
     private void changeLabTechPosition() {
@@ -159,7 +191,8 @@ public class PhysicsQActivity extends AppCompatActivity {
 
     public void loadQ(int i) {
         tv_question.setText(questions[i]);
-        String[] currentChoice = choices[i].split("...");
+        String[] currentChoice = choices[i].split("xxx");
+        Log.w("Physics q", choices[0]);
         btn_c1.setText(currentChoice[0]);
         btn_c2.setText(currentChoice[1]);
         btn_c3.setText(currentChoice[2]);
