@@ -64,8 +64,25 @@ public class DescriptionActivity extends AppCompatActivity {
             background = res.getDrawable(R.drawable.school);
             topicString = "Geometry";
             firstSentence = "Here is the Geometry School. It is one of the most elite schools in Math Island!";
-
         }
+
+        /*else if(topic.contentEquals("xx")) {
+            background = res.getDrawable(R.drawable.beach);
+            topicString = "Fluid Mechanics";
+            firstSentence = "Here is the Horseshoe Bay. It is one of the most relaxing beaches!";
+        }
+
+        else if(topic.contentEquals("ts")) {
+            background = res.getDrawable(R.drawable.court);
+            topicString = "Kinematics";
+            firstSentence = "Here is the Tennis Court. It has the most advanced sports equipment!";
+        }
+
+        else if(topic.contentEquals("ts")) {
+            background = res.getDrawable(R.drawable.court);
+            topicString = "Measurements";
+            firstSentence = "Here is the Tennis Court. It has the most advanced sports equipment!";
+        }*/
 
         thirdSentence = " You can practice your " + topicString + " skills here with some simple " + topicString + " questions.";
         descriptionTextView.setText(firstSentence + thirdSentence + fourthSentence);
