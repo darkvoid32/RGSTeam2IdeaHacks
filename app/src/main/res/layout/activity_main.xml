@@ -106,4 +106,15 @@
         android:layout_margin="5dp"
         android:id="@+id/settings"
         android:clickable="true"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height= "match_parent"
+        android:src="@drawable/cloud"
+        android:layout_centerInParent="true"
+        android:alpha="0.95"
+        android:visibility="gone"
+        android:id="@+id/movingCloud"/>
+
+
 </RelativeLayout>

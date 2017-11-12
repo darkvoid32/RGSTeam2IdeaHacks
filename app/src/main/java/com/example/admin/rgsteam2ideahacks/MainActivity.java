@@ -3,6 +3,8 @@ package com.example.admin.rgsteam2ideahacks;
 import android.app.ActionBar;
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.drawable.Animatable;
+import android.os.SystemClock;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +13,8 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
@@ -20,6 +24,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private ImageView mainIV, mathIV, physicsIV;
     private HorizontalScrollView scrollView;
+    private Animation anim;
+    private ImageView movingCloud;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getSupportActionBar().hide();
+
+        anim = AnimationUtils.loadAnimation(this, R.anim.movinganim);
+        movingCloud = findViewById(R.id.movingCloud);
 
         //TODO Home page with bird eye view of different islands have clouds floating around
         //TODO Main islands (Graphics)
@@ -68,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
         mainIV.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 final Intent intent = new Intent (MainActivity.this, HomeIslandActivity.class);
+                /*movingCloud.setVisibility(View.VISIBLE);
+                movingCloud.startAnimation(anim);*/
                 startActivity(intent);
             }
         });
@@ -75,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
         mathIV.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 final Intent intent = new Intent (MainActivity.this, MathIslandActivity.class);
+                /*movingCloud.setVisibility(View.VISIBLE);
+                movingCloud.startAnimation(anim);*/
                 startActivity(intent);
             }
         });
@@ -82,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
         physicsIV.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 final Intent intent = new Intent (MainActivity.this, PhysicsIslandActivity.class);
+                /*movingCloud.setVisibility(View.VISIBLE);
+                movingCloud.startAnimation(anim);*/
                 startActivity(intent);
             }
         });
