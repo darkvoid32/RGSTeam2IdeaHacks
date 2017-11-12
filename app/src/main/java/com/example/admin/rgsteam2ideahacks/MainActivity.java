@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             ArrayList<Boolean> physicsProgress = new ArrayList<>();
 
             while(physicsScanner.hasNext()){
-                physicsProgress.add(new Boolean(physicsScanner.next());
+                physicsProgress.add(new Boolean(physicsScanner.next()));
             }
 
             currentPlayer.setPhysicsProgress(physicsProgress);
