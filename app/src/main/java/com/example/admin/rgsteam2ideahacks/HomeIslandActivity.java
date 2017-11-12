@@ -157,6 +157,8 @@ public class HomeIslandActivity extends AppCompatActivity implements View.OnTouc
         String levelString = "" + level;
         currentLevel.setText(levelString);
 
+        coinTV.setText("" + currentPlayer.getPsiDollars());
+
         //Get the exp of the player
         expCurrentValue = currentPlayer.getExp();
         Log.i("data", String.valueOf(expCurrentValue));
