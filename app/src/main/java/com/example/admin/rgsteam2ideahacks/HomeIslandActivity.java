@@ -10,12 +10,16 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class HomeIslandActivity extends AppCompatActivity implements View.OnTouchListener {
@@ -29,7 +33,7 @@ public class HomeIslandActivity extends AppCompatActivity implements View.OnTouc
 
     private int count = 0,level;
     private double expLength = 0,expCurrentValue,expMaxValue = 0;
-    private Player p1 = GlobalPlayer.p1;
+    private Player currentPlayer;
 
 
     private static final String TAG = "Touch";
@@ -61,6 +65,34 @@ public class HomeIslandActivity extends AppCompatActivity implements View.OnTouc
 
         getSupportActionBar().hide();
 
+        try{
+            FileInputStream inputStream = openFileInput("UserAccounts.txt");
+            Scanner inputStreamScanner = new Scanner(inputStream);
+
+            ArrayList<String> lines  = new ArrayList<String>();
+            while(inputStreamScanner.hasNextLine()){
+                lines.add(inputStreamScanner.nextLine());
+            }
+
+            currentPlayer = new Player(lines.get(0), Integer.parseInt(lines.get(1)), Integer.parseInt(lines.get(2)));
+
+            // Parse physics progress into array
+            Scanner physicsScanner = new Scanner(lines.get(3));
+            physicsScanner.useDelimiter(",");
+            ArrayList<Boolean> physicsProgress = new ArrayList<>();
+
+            while(physicsScanner.hasNext()){
+                physicsProgress.add(new Boolean(physicsScanner.next()));
+            }
+
+            currentPlayer.setPhysicsProgress(physicsProgress);
+        }
+        catch(IOException exception){
+            Log.w("MainActivity", exception.getStackTrace().toString());
+        }
+
+        Toast.makeText(this, currentPlayer.toString(), Toast.LENGTH_LONG).show();
+
         setEXPBar();
 
         ImageView view = (ImageView) findViewById(R.id.mainIslandIV);
@@ -90,13 +122,13 @@ public class HomeIslandActivity extends AppCompatActivity implements View.OnTouc
 
         //Get the level of the player
 
-        level = p1.getLevel();
+        level = currentPlayer.getLevel();
 
         String levelString = "" + level;
         currentLevel.setText(levelString);
 
         //Get the exp of the player
-        expCurrentValue = p1.getExp();
+        expCurrentValue = currentPlayer.getExp();
         Log.i("data", String.valueOf(expCurrentValue));
 
         //Get max exp for level
