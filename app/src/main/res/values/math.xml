@@ -110,18 +110,39 @@
         "D) infinity"
     </array>
     <array name="geoQuestions">
+        "What is the interior angle of an equilateral triangle in degrees?"
+        "What is the interior angle of a rectangle in degrees?"
         "Given two angles of a triangle are 30 and 60 degrees. What is the third angle in degrees?"
+        "Given an isosceles triangle ABC where AB = AC. If angle BAC = 40 degrees, what is angle ABC in degrees?"
         "Find the area of a square with side length 5."
+        "Find the area of a rectangle with length 3 and width 5."
+        "Given the length of a rectangle is 4. If the width of the rectangle is 2 less than its length, what is the area of the rectangle?"
         "Find the area of a circle with radius 2."
+        "Find the area of a circle whose perimeter is 10 pi."
+        "Given an isosceles triangle ABC where AB = AC. If angle ABC = 60 degrees and AB = 10 cm, what is the length of AC?"
     </array>
     <array name="geoChoices">
         "A) 30xxxB) 60xxxC) 90xxxD) 120"
+        "A) 30xxxB) 60xxxC) 90xxxD) 120"
+        "A) 30xxxB) 60xxxC) 90xxxD) 120"
+        "A) 50xxxB) 60xxxC) 70xxxD) 80"
         "A) 5xxxB) 10xxxC) 15xxxD) 25"
+        "A) 15xxxB) 20xxxC) 25xxxD) 30"
+        "A) 4xxxB) 8xxxC) 16xxxD) 24"
         "A) 3 pixxxB) 4 pixxxC) 5 pixxxD) 6 pixxx"
+        "A) 10 pixxxB) 15 pixxxC) 20 pixxxD) 25 pi"
+        "A) 10 cmxxxB) 5 cmxxxC) 15 cmxxxD) 20 cm"
     </array>
     <array name="geoAns">
+        "B) 60"
         "C) 90"
+        "C) 90"
+        "C) 70"
         "D) 25"
+        "A) 15"
+        "B) 8"
         "B) 4 pi"
+        "D) 25 pi"
+        "A) 10 cm"
     </array>
 </resources>
