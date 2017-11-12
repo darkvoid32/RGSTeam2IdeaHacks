@@ -48,7 +48,10 @@ public class LauncherActivity extends AppCompatActivity {
     }
 
     public void createAccount(View view){
-        String username = usernameET.getText().toString();
+        String username = "";
+        if(usernameET!=null) {
+            username = usernameET.getText().toString();
+        }
 
         // Checks if EditText is empty
         if (username.equals("")){
