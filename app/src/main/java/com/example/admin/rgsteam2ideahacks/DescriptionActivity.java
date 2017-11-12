@@ -87,7 +87,7 @@ public class DescriptionActivity extends AppCompatActivity {
         else if(topic.contentEquals("m")) {
             background = res.getDrawable(R.drawable.lab);
             topicString = "Measurements";
-            firstSentence = "Here is the Tennis Court. It has the most advanced sports equipment!";
+            firstSentence = "Here is the Professor Lab. It is where new formulas are formed!";
             intent = new Intent(getApplicationContext(), PhysicsQActivity.class);
         }
 
