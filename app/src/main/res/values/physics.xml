@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--Fluid mechanics-->
-    <string-array name="fQuestions">
+    <!--<string-array name="fQuestions">
         <item>"The mass and volume of a human are 70 kg and 0.0711 m^3 respectively. What is the human's density in kg/m^3?"</item>
         <item>"The density of water is 1000 kg/m^3. What is the mass of 1 litre of water in kg?"</item>
         <item>"The density of gold is 19.32 g/cm^3. If a piece of gold has mass 20.00 kg, what is its volume in cm^3?"</item>
@@ -17,7 +17,7 @@
         <item>"C) 1035"</item>
     </string-array>
 
-    <!--Kinematics-->
+    &lt;!&ndash;Kinematics&ndash;&gt;
     <string-array name="kQuestions">
         <item>"Usain Bolt ran 100 m in 9.58 s. What was his average speed?"</item>
         <item>"Quan Hao run 2.4 km with an average speed of 4 m/s. How long does he take (in seconds)?"</item>
@@ -34,7 +34,7 @@
         <item>"A) 360"</item>
     </string-array>
 
-    <!--Measurement-->
+    &lt;!&ndash;Measurement&ndash;&gt;
     <string-array name="mQuestions">
         <item>"Which of the following is not a physical quantity?"</item>
         <item>"Which of the following is a base quantity?"</item>
@@ -49,5 +49,5 @@
         <item>"A) Love"</item>
         <item>"B) Time"</item>
         <item>"C) kg"</item>
-    </string-array>
+    </string-array>-->
 </resources>
