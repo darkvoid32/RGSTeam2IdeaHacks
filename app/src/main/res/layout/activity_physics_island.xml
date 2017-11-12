@@ -9,7 +9,7 @@
     android:background="@drawable/physics_island">
 
     <!--Button for Horseshoe Bay [START]-->
-
+    <!--Fluid Mechanics-->
     <android.support.constraint.Guideline
         android:id="@+id/horseshoe_right"
         android:orientation="vertical"
