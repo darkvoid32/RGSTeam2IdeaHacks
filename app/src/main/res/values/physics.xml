@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--fluid mechanics-->
+    <!--Fluid mechanics-->
     <string-array name="fQuestions">
         <item>"The mass and volume of a human are 70 kg and 0.0711 m^3 respectively. What is the human's density in kg/m^3?"</item>
         <item>"The density of water is 1000 kg/m^3. What is the mass of 1 litre of water in kg?"</item>
