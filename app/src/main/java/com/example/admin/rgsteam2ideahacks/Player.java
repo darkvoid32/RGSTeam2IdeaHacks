@@ -1,5 +1,7 @@
 package com.example.admin.rgsteam2ideahacks;
 
+import android.util.Log;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
@@ -125,6 +127,7 @@ public class Player {
                 physicsProgressString += "false,";
             }
         }
+        Log.w("Player", physicsProgressString);
         physicsProgressString = physicsProgressString.substring(0, physicsProgressString.length() - 1);
 
         return username + "\n" + psiDollars + "\n" + exp + "\n" + physicsProgressString;

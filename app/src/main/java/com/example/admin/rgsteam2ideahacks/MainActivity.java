@@ -45,13 +45,15 @@ public class MainActivity extends AppCompatActivity {
         setUpIslandIV();
 
         try{
-            FileInputStream inputStream = openFileInput("UserAccounts.txt");
+            FileInputStream inputStream = openFileInput("PlayerData.txt");
             Scanner inputStreamScanner = new Scanner(inputStream);
 
             ArrayList<String> lines  = new ArrayList<String>();
             while(inputStreamScanner.hasNextLine()){
                 lines.add(inputStreamScanner.nextLine());
             }
+
+            Log.w("MainActivity", lines.toString());
 
             currentPlayer = new Player(lines.get(0), Integer.parseInt(lines.get(1)), Integer.parseInt(lines.get(2)));
 
