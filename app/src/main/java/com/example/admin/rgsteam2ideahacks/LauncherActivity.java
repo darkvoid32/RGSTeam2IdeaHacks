@@ -23,7 +23,6 @@ public class LauncherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_launcher);
 
         int READ_BLOCK_SIZE = 5;
 
