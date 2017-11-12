@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--This is only for reference. The actual used resource is in strings.xml.-->
 <resources>
     <array name="ntQuestions">
         "Which of the following is not a prime number?"

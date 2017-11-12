@@ -9,47 +9,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".LauncherActivity"
             android:screenOrientation="sensorLandscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:screenOrientation="sensorLandscape">
-            <!--<intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
-
         <activity
             android:name=".MathIslandActivity"
-            android:screenOrientation="sensorLandscape">
-        </activity>
+            android:screenOrientation="sensorLandscape"></activity>
         <activity
             android:name=".DescriptionActivity"
-            android:screenOrientation="sensorLandscape">
-        </activity>
-
-        <activity android:name=".MathQActivity"
-            android:screenOrientation="sensorLandscape">
-        </activity>
-
-        <activity android:name=".HomeIslandActivity"
-            android:screenOrientation="sensorLandscape">
-        </activity>
-
-        <activity android:name=".PhysicsIslandActivity"
-            android:screenOrientation="sensorLandscape">
-        </activity>
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".MathQActivity"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".HomeIslandActivity"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity
+            android:name=".PhysicsIslandActivity"
+            android:screenOrientation="sensorLandscape"></activity>
+        <activity android:name=".PhysicsQActivity"></activity>
     </application>
 
 </manifest>
